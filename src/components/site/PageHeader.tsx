@@ -1,41 +1,41 @@
-import { Reveal } from "./Reveal";
+import { motion } from "framer-motion";
 
-export function PageHeader({
-  eyebrow,
-  title,
-  subtitle,
-  image,
-}: {
+interface PageHeaderProps {
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  image?: string;
-}) {
+}
+
+export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
   return (
-    <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden">
-      {image && (
-        <>
-          <img
-            src={image}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/80 to-ivory" />
-        </>
-      )}
-      <div className="relative mx-auto max-w-5xl px-6 text-center">
+    <section className="relative overflow-hidden bg-pearl py-14 sm:py-20 border-b border-slate-200 bg-mesh-glow-light">
+      <div className="mx-auto max-w-5xl px-4 text-center relative z-10 space-y-3">
         {eyebrow && (
-          <Reveal>
-            <p className="eyebrow mb-5">{eyebrow}</p>
-          </Reveal>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="eyebrow"
+          >
+            {eyebrow}
+          </motion.p>
         )}
-        <Reveal delay={0.1}>
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-charcoal">{title}</h1>
-        </Reveal>
+        <motion.h1
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="font-serif text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight"
+        >
+          {title}
+        </motion.h1>
         {subtitle && (
-          <Reveal delay={0.2}>
-            <p className="mt-6 max-w-2xl mx-auto text-lg text-taupe leading-relaxed">{subtitle}</p>
-          </Reveal>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xs sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal"
+          >
+            {subtitle}
+          </motion.p>
         )}
       </div>
     </section>

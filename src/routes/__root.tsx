@@ -13,17 +13,17 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-navy-dark px-4 text-white">
+    <div className="flex min-h-screen items-center justify-center bg-pearl px-4 text-slate-900">
       <div className="max-w-md text-center space-y-4">
-        <h1 className="text-8xl font-black text-cyan-glow font-syne">404</h1>
-        <h2 className="text-2xl font-bold font-syne">Page Not Found</h2>
-        <p className="text-sm text-slate-400">
+        <h1 className="text-8xl font-serif font-bold text-teal-brand">404</h1>
+        <h2 className="text-2xl font-bold font-serif">Page Not Found</h2>
+        <p className="text-sm text-slate-600">
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="pt-4">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-xl bg-cyan-glow px-6 py-3 text-xs font-bold uppercase tracking-wider text-navy-dark shadow-lg hover:bg-white transition-colors"
+            className="inline-flex items-center justify-center rounded-xl bg-teal-brand px-6 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-md hover:bg-slate-900 transition-colors"
           >
             Return to Homepage
           </Link>
@@ -38,10 +38,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-navy-dark px-4 text-white">
+    <div className="flex min-h-screen items-center justify-center bg-pearl px-4 text-slate-900">
       <div className="max-w-md text-center space-y-4">
-        <h1 className="text-2xl font-bold font-syne">Something went wrong</h1>
-        <p className="text-sm text-slate-400">
+        <h1 className="text-2xl font-bold font-serif">Something went wrong</h1>
+        <p className="text-sm text-slate-600">
           We encountered an error loading this page. Please try refreshing.
         </p>
         <div className="pt-4 flex flex-wrap justify-center gap-3">
@@ -50,13 +50,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-xl bg-cyan-glow px-6 py-3 text-xs font-bold uppercase tracking-wider text-navy-dark transition-colors"
+            className="inline-flex items-center justify-center rounded-xl bg-teal-brand px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors"
           >
             Try Again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-900 transition-colors"
           >
             Go Home
           </a>
@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap",
       },
     ],
   }),
@@ -114,7 +114,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <HeadContent />
-      <div className="flex min-h-screen flex-col bg-navy-dark text-slate-100 font-sans selection:bg-cyan-glow selection:text-navy-dark">
+      <div className="flex min-h-screen flex-col bg-pearl text-slate-800 font-sans selection:bg-teal-brand selection:text-white">
         <SiteNav />
         <main className="flex-1">
           <Outlet />

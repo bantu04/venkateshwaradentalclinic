@@ -17,24 +17,24 @@ export function GalleryGrid({ filter }: { filter?: string }) {
           <div
             key={idx}
             onClick={() => setOpen(idx)}
-            className="group cursor-pointer glass-card-interactive rounded-2xl border border-white/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="group cursor-pointer glass-card-interactive rounded-2xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="relative aspect-4/3 overflow-hidden bg-slate-900">
+            <div className="relative aspect-4/3 overflow-hidden bg-slate-100">
               <img
                 src={g.src}
                 alt={g.title}
                 loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md text-amber-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/10">
+              <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-amber-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-slate-200 shadow-xs">
                 {g.cat}
               </div>
             </div>
             <div className="p-4 space-y-1">
-              <h3 className="font-syne text-lg font-bold text-white group-hover:text-cyan-glow transition-colors">
+              <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-teal-brand transition-colors">
                 {g.title}
               </h3>
-              <p className="text-xs text-slate-400">{g.desc}</p>
+              <p className="text-xs text-slate-500 font-normal">{g.desc}</p>
             </div>
           </div>
         ))}
