@@ -8,10 +8,10 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Akshaya Dental Hospital" },
+      { title: "Contact — Venkateswara Dental Hospital" },
       {
         name: "description",
-        content: "Book an appointment at Akshaya Dental Hospital in Balanagar, Hyderabad.",
+        content: "Book an appointment at Venkateswara Dental Hospital in Sanath Nagar, Hyderabad.",
       },
     ],
   }),

@@ -6,10 +6,10 @@ import { GalleryGrid } from "@/components/site/GalleryGrid";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Akshaya Dental Hospital" },
+      { title: "Gallery — Venkateswara Dental Hospital" },
       {
         name: "description",
-        content: "Photos of our clinic, treatments, team and patient results.",
+        content: "Photos of our clinic in Sanath Nagar, treatments, team and patient results.",
       },
     ],
   }),
@@ -23,9 +23,9 @@ function GalleryPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Inside Akshaya"
+        eyebrow="Inside Venkateswara Dental"
         title="A look around."
-        subtitle="The rooms, the people, the work."
+        subtitle="The clinic rooms, team, and patient transformations."
       />
       <div className="mx-auto max-w-7xl px-6 pb-24">
         <div className="flex flex-wrap justify-center gap-2 mb-12">

@@ -21,10 +21,11 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
           <h3 className="font-serif text-2xl text-ivory">
-            Akshaya <span className="italic text-gold">dental</span>
+            Venkateswara <span className="italic text-gold">dental hospital</span>
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-ivory/60">
-            Your Smile, Our Passion. Premium family dentistry in Balanagar, Hyderabad.
+            Top-rated dental care & dental implants in Sanath Nagar, Hyderabad. Above Ratnadeep
+            Super Market.
           </p>
           <div className="mt-5 flex items-center gap-1.5 text-sm">
             {[1, 2, 3, 4, 5].map((i) => (
@@ -88,7 +89,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/doctor" className="hover:text-gold">
-                Our Doctor
+                Our Team (Demo)
               </Link>
             </li>
             <li>
@@ -132,7 +133,7 @@ export function SiteFooter() {
                 href={CLINIC.mapsDirections}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-start gap-3 hover:text-gold"
+                className="flex items-start gap-3 hover:text-gold leading-relaxed"
               >
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" /> {CLINIC.address}
               </a>
@@ -150,8 +151,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-ivory/10">
         <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-ivory/50">
-          <p>© {new Date().getFullYear()} Akshaya Dental Hospital. All rights reserved.</p>
-          <p>{CLINIC.address}</p>
+          <p>© {new Date().getFullYear()} Venkateswara Dental Hospital. All rights reserved.</p>
+          <p>Sanath Nagar, Hyderabad, Telangana 500018</p>
         </div>
       </div>
     </footer>

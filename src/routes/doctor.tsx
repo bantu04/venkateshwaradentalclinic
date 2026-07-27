@@ -1,18 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
-import { Reveal } from "@/components/site/Reveal";
+import { Reveal, RevealStagger, RevealItem, revealItemVariants } from "@/components/site/Reveal";
 import { MapContact } from "@/components/site/MapContact";
-import { CLINIC, REVIEWS } from "@/lib/site-data";
-import { Star } from "lucide-react";
+import { CLINIC, REVIEWS, DEMO_TEAM } from "@/lib/site-data";
+import { Star, Award, CheckCircle, ShieldCheck } from "lucide-react";
 
 export const Route = createFileRoute("/doctor")({
   head: () => ({
     meta: [
-      { title: "Dr. Hitendra Singh — Akshaya Dental Hospital" },
+      { title: "Specialist Dental Team — Venkateswara Dental Hospital" },
       {
         name: "description",
         content:
-          "Meet Dr. Hitendra Singh, Chief Dental Surgeon at Akshaya Dental Hospital, Hyderabad.",
+          "Meet our team of dental specialists (Demo Team) at Venkateswara Dental Hospital, Sanath Nagar, Hyderabad.",
       },
     ],
   }),
@@ -23,71 +23,80 @@ function DoctorPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Your Dentist"
-        title="Dr. Hitendra Singh"
-        subtitle="Chief Dental Surgeon · Akshaya Dental Hospital, Hyderabad"
+        eyebrow="Our Medical Team"
+        title="Specialist Dental Team (Demo Team)"
+        subtitle="Venkateswara Dental Hospital · Sanath Nagar, Hyderabad"
       />
 
       <section className="pb-24">
-        <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-12 items-start">
-          <Reveal className="lg:col-span-2">
-            <img
-              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80"
-              alt={CLINIC.doctor}
-              className="w-full aspect-4/5 object-cover rounded-sm"
-            />
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-3">
-            <p className="eyebrow mb-4">Biography</p>
-            <h2 className="font-serif text-3xl leading-snug">
-              A clinician known for <span className="italic text-sage-dark">listening</span> first.
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal className="mb-12 max-w-3xl">
+            <p className="eyebrow mb-3 text-sage-dark">Clinical Excellence</p>
+            <h2 className="font-serif text-3xl md:text-4xl leading-snug">
+              Compassionate doctors dedicated to{" "}
+              <span className="italic text-sage-dark">gentle care</span>.
             </h2>
-            <div className="mt-6 space-y-5 text-taupe leading-relaxed">
-              <p>
-                Dr. Hitendra Singh founded Akshaya Dental Hospital in 2013 with a vision of creating
-                a clinic where families could feel as comfortable as they would in their own home —
-                without compromising on clinical standards.
-              </p>
-              <p>
-                With over 12 years of practice across general dentistry, endodontics, smile design
-                and implantology, his work spans from a child's first filling to complex full-arch
-                rehabilitations. Patients return for his calm pace, clear explanations, and a
-                refusal to recommend treatment that isn't strictly needed.
-              </p>
-              <p>
-                He maintains active memberships with the Indian Dental Association and continues
-                training across digital smile design and implant prosthodontics each year.
-              </p>
-            </div>
-            <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              {[
-                { t: "Qualifications", d: "BDS, MDS — General & Restorative Dentistry" },
-                { t: "Experience", d: "12+ years in private practice" },
-                { t: "Specialisations", d: "Endodontics, Smile Design, Implantology" },
-                { t: "Languages", d: "English, Hindi, Telugu, Marathi" },
-              ].map((b) => (
-                <div key={b.t} className="border border-blush/50 rounded-sm p-5">
-                  <p className="eyebrow mb-2">{b.t}</p>
-                  <p className="text-sm text-charcoal">{b.d}</p>
+            <p className="mt-4 text-taupe leading-relaxed">
+              At Venkateswara Dental Hospital, our team of dental surgeons and specialists provide
+              expert care in dental implants, root canal treatment, pediatric dentistry, and
+              cosmetic procedures. Located in Sanath Nagar (above Ratnadeep Super Market), we ensure
+              every treatment is transparent and budget friendly.
+            </p>
+          </Reveal>
+
+          <RevealStagger className="grid md:grid-cols-2 gap-10">
+            {DEMO_TEAM.map((doc) => (
+              <RevealItem
+                key={doc.name}
+                variants={revealItemVariants}
+                className="bg-ivory border border-blush/40 rounded-sm p-6 flex flex-col sm:flex-row gap-6 items-start"
+              >
+                <img
+                  src={doc.img}
+                  alt={doc.name}
+                  className="w-full sm:w-44 aspect-4/5 object-cover rounded-sm shrink-0"
+                />
+                <div className="flex-1">
+                  <span className="inline-block px-2.5 py-1 text-[11px] font-semibold bg-sage-dark/10 text-sage-dark rounded-sm uppercase tracking-wider mb-2">
+                    Demo Profile
+                  </span>
+                  <h3 className="font-serif text-2xl text-charcoal">{doc.name}</h3>
+                  <p className="text-sm font-medium text-sage-dark mt-1">{doc.role}</p>
+                  <p className="text-xs text-taupe mt-1 font-mono">{doc.qualifications}</p>
+
+                  <div className="mt-3 space-y-1 text-xs text-charcoal/80">
+                    <p className="flex items-center gap-1.5">
+                      <Award className="h-3.5 w-3.5 text-sage-dark shrink-0" /> {doc.experience}
+                    </p>
+                    <p className="flex items-center gap-1.5">
+                      <CheckCircle className="h-3.5 w-3.5 text-sage-dark shrink-0" />{" "}
+                      {doc.specialisations}
+                    </p>
+                  </div>
+
+                  <p className="mt-4 text-xs text-taupe leading-relaxed">{doc.bio}</p>
                 </div>
-              ))}
-            </div>
+              </RevealItem>
+            ))}
+          </RevealStagger>
+
+          <div className="mt-12 text-center">
             <Link
               to="/contact"
-              className="mt-8 inline-block rounded-sm bg-sage-dark px-6 py-3 text-xs uppercase tracking-[0.18em] text-ivory hover:bg-charcoal transition-colors"
+              className="inline-block rounded-sm bg-sage-dark px-8 py-4 text-xs uppercase tracking-[0.18em] text-ivory hover:bg-charcoal transition-colors shadow-sm"
             >
-              Book a consultation
+              Book an Appointment with Our Team
             </Link>
-          </Reveal>
+          </div>
         </div>
       </section>
 
       <section className="py-20 bg-cream/40">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-12 text-center">
-            <p className="eyebrow mb-4">What patients say</p>
+            <p className="eyebrow mb-4">Patient Feedback</p>
             <h2 className="font-serif text-4xl">
-              In their <span className="italic text-sage-dark">words</span>.
+              5.0★ Google Rated by <span className="italic text-sage-dark">407+ Patients</span>
             </h2>
           </Reveal>
           <div className="grid md:grid-cols-3 gap-6">

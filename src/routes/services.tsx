@@ -8,14 +8,17 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Akshaya Dental Hospital" },
+      { title: "Services — Venkateswara Dental Hospital" },
       {
         name: "description",
         content:
-          "Full-service dentistry in Hyderabad — extractions, smile correction, implants, orthodontics, restorative & family care.",
+          "Full-service dentistry in Sanath Nagar, Hyderabad — dental implants, root canal treatment, teeth whitening, extractions, crowns & pediatric care.",
       },
-      { property: "og:title", content: "Services — Akshaya Dental Hospital" },
-      { property: "og:description", content: "Every treatment we offer, explained clearly." },
+      { property: "og:title", content: "Services — Venkateswara Dental Hospital" },
+      {
+        property: "og:description",
+        content: "Every treatment we offer at Venkateswara Dental Hospital, explained clearly.",
+      },
     ],
   }),
   component: ServicesPage,
@@ -41,7 +44,7 @@ function ServicesPage() {
                 <img
                   src={s.image}
                   alt={s.title}
-                  className="w-full aspect-[4/3] object-cover rounded-sm"
+                  className="w-full aspect-4/3 object-cover rounded-sm"
                 />
                 <div>
                   <p className="eyebrow mb-4">Service · 0{(i % 9) + 1}</p>

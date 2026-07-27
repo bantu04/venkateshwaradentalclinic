@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Akshaya Dental Hospital" },
+      { title: "Privacy Policy — Venkateswara Dental Hospital" },
       { name: "description", content: "How we collect, use and protect your data." },
     ],
   }),
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/privacy")({
       <section className="pb-24">
         <div className="mx-auto max-w-3xl px-6 prose-content space-y-6 text-taupe leading-relaxed">
           <p>
-            This page is maintained by Akshaya Dental Hospital to answer common questions about how
-            we handle your personal and clinical information.
+            This page is maintained by Venkateswara Dental Hospital to answer common questions about
+            how we handle your personal and clinical information.
           </p>
           <h2 className="font-serif text-2xl text-charcoal mt-8">Information we collect</h2>
           <p>

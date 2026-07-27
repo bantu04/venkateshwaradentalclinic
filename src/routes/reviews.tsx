@@ -8,10 +8,11 @@ import { MapContact } from "@/components/site/MapContact";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — Akshaya Dental Hospital" },
+      { title: "Reviews — Venkateswara Dental Hospital" },
       {
         name: "description",
-        content: "Real reviews from real patients of Akshaya Dental Hospital, Hyderabad.",
+        content:
+          "Verified Google reviews from patients of Venkateswara Dental Hospital in Sanath Nagar, Hyderabad.",
       },
     ],
   }),
@@ -19,10 +20,10 @@ export const Route = createFileRoute("/reviews")({
 });
 
 const BREAKDOWN = [
-  { stars: 5, pct: 92 },
-  { stars: 4, pct: 6 },
-  { stars: 3, pct: 1 },
-  { stars: 2, pct: 1 },
+  { stars: 5, pct: 98 },
+  { stars: 4, pct: 2 },
+  { stars: 3, pct: 0 },
+  { stars: 2, pct: 0 },
   { stars: 1, pct: 0 },
 ];
 

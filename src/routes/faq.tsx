@@ -6,11 +6,11 @@ import { Plus, Minus } from "lucide-react";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Akshaya Dental Hospital" },
+      { title: "FAQ — Venkateswara Dental Hospital" },
       {
         name: "description",
         content:
-          "Answers to common questions about appointments, costs, emergencies and protocols.",
+          "Answers to common questions about appointments, costs, root canal treatment and dental implants.",
       },
     ],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/faq")({
 const FAQS = [
   {
     q: "How do I book an appointment?",
-    a: "Call us at 080 0849 9594, fill in the contact form on this site, or walk in during clinic hours. We confirm appointments the same day.",
+    a: "Call us at 096763 16416, fill in the contact form on this site, or visit our clinic at SVSS Nivas Complex, Road No. 1, Sanath Nagar. We confirm appointments the same day.",
   },
   {
     q: "Do you accept insurance?",

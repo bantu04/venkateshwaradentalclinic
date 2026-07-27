@@ -6,11 +6,11 @@ export function MapContact() {
   return (
     <section id="contact" className="py-24 bg-cream/40">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-stretch">
-        <div className="rounded-sm overflow-hidden border border-blush/40 shadow-sm min-h-[400px]">
+        <div className="rounded-sm overflow-hidden border border-blush/40 shadow-sm min-h-100">
           <iframe
-            title="Akshaya Dental Hospital on Google Maps"
+            title="Venkateswara Dental Hospital on Google Maps"
             src={CLINIC.mapEmbed}
-            className="w-full h-full min-h-[400px]"
+            className="w-full h-full min-h-100"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

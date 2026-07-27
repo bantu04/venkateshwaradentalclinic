@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Akshaya Dental Hospital" },
+      { title: "Terms of Service — Venkateswara Dental Hospital" },
       { name: "description", content: "Appointment, cancellation and treatment terms." },
     ],
   }),
@@ -14,8 +14,8 @@ export const Route = createFileRoute("/terms")({
       <section className="pb-24">
         <div className="mx-auto max-w-3xl px-6 space-y-6 text-taupe leading-relaxed">
           <p>
-            These terms govern your visit and treatment at Akshaya Dental Hospital. By booking an
-            appointment you acknowledge them.
+            These terms govern your visit and treatment at Venkateswara Dental Hospital. By booking
+            an appointment you acknowledge them.
           </p>
           <h2 className="font-serif text-2xl text-charcoal mt-8">Appointments & cancellations</h2>
           <p>

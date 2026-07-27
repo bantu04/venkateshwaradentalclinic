@@ -2,20 +2,22 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal, RevealStagger, RevealItem, revealItemVariants } from "@/components/site/Reveal";
 import { MapContact } from "@/components/site/MapContact";
+import { CLINIC, DEMO_TEAM } from "@/lib/site-data";
 import { Award, Heart, ShieldCheck, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Akshaya Dental Hospital" },
+      { title: "About — Venkateswara Dental Hospital" },
       {
         name: "description",
-        content: "Our story, values and the team behind Akshaya Dental Hospital in Hyderabad.",
+        content:
+          "Our story, values and specialist team behind Venkateswara Dental Hospital in Sanath Nagar, Hyderabad.",
       },
-      { property: "og:title", content: "About Akshaya Dental Hospital" },
+      { property: "og:title", content: "About Venkateswara Dental Hospital" },
       {
         property: "og:description",
-        content: "A boutique family dental hospital in Balanagar, Hyderabad.",
+        content: "Best dental clinic and dental implants center in Sanath Nagar, Hyderabad.",
       },
     ],
   }),
@@ -26,7 +28,7 @@ const VALUES = [
   {
     icon: Heart,
     t: "Patient first",
-    d: "Every plan starts with what's best for you — not what bills best.",
+    d: "Every plan starts with what's best for you — transparent and budget friendly.",
   },
   {
     icon: ShieldCheck,
@@ -35,25 +37,28 @@ const VALUES = [
   },
   {
     icon: Sparkles,
-    t: "Quiet luxury",
-    d: "Clean rooms, calm staff, considered details — without the markup.",
+    t: "Cool ambience",
+    d: "Clean, hygienic rooms and very nice staff to make every visit relaxed.",
   },
   {
     icon: Award,
     t: "Clinical rigour",
-    d: "Modern sterilisation, evidence-based protocols, continuous training.",
+    d: "Modern sterilisation, laser dentistry, digital X-rays, and evidence-based protocols.",
   },
 ];
 
 const MILESTONES = [
-  { year: "2013", t: "Akshaya Dental Hospital founded in Balanagar, Hyderabad." },
   {
-    year: "2016",
-    t: "Expansion to full-service family dentistry — pediatrics, ortho, endodontics.",
+    year: "2015",
+    t: "Venkateswara Dental Hospital established at SVSS Nivas Complex, Sanath Nagar.",
   },
-  { year: "2019", t: "Crossed 300 families under continuous care." },
-  { year: "2022", t: "Implant & smile design suite added; digital imaging upgrade." },
-  { year: "2024", t: "Achieved 4.9★ Google rating across 38+ verified reviews." },
+  {
+    year: "2018",
+    t: "Expansion to full-service family dentistry — pediatrics, laser dentistry, endodontics.",
+  },
+  { year: "2021", t: "Crossed 1,000+ happy patients cared for in Czech Colony, Sanath Nagar." },
+  { year: "2024", t: "Upgraded dental implants & digital X-ray diagnostics suite." },
+  { year: "2026", t: "Achieved 5.0★ Google rating across 407+ verified patient reviews." },
 ];
 
 function AboutPage() {
@@ -62,7 +67,7 @@ function AboutPage() {
       <PageHeader
         eyebrow="Our Story"
         title="Dentistry, the way it should feel."
-        subtitle="Akshaya Dental Hospital was founded on a simple belief — that clinical excellence and human warmth are not opposites."
+        subtitle="Venkateswara Dental Hospital was founded on a simple belief — that clinical excellence and human warmth belong together."
         image="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=2000&q=80"
       />
 
@@ -71,8 +76,8 @@ function AboutPage() {
           <Reveal>
             <img
               src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=80"
-              alt="Akshaya clinic"
-              className="rounded-sm w-full aspect-[4/5] object-cover"
+              alt="Venkateswara Dental Hospital clinic interior"
+              className="rounded-sm w-full aspect-4/5 object-cover"
             />
           </Reveal>
           <div>
@@ -81,16 +86,16 @@ function AboutPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="font-serif text-4xl">
-                To give Hyderabad a dental home worth{" "}
-                <span className="italic text-sage-dark">returning to</span>.
+                To give Sanath Nagar a dental hospital worth{" "}
+                <span className="italic text-sage-dark">trusting</span>.
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-6 text-taupe leading-relaxed">
-                We treat patients across three generations of the same family — that's the standard
-                we hold ourselves to. From a child's first visit to a grandparent's full-arch
-                rehabilitation, every appointment is paced patiently, explained fully, and priced
-                with respect.
+                Located on the 1st Floor, SVSS Nivas Complex (above Ratnadeep Super Market, opposite
+                Gokul Theatre Lane), Venkateswara Dental Hospital provides top-rated dental care in
+                Sanath Nagar, Hyderabad. From root canals to dental implants, our treatments are
+                known to be painless, budget friendly, and patient-focused.
               </p>
             </Reveal>
           </div>
@@ -126,13 +131,13 @@ function AboutPage() {
           <Reveal className="mb-12">
             <p className="eyebrow mb-4">Milestones</p>
             <h2 className="font-serif text-4xl">
-              A decade of <span className="italic text-sage-dark">quiet</span> growth.
+              A decade of <span className="italic text-sage-dark">trusted</span> growth.
             </h2>
           </Reveal>
           <div className="relative pl-8 border-l border-blush">
             {MILESTONES.map((m, i) => (
               <Reveal key={m.year} delay={i * 0.05} className="relative mb-10 last:mb-0">
-                <span className="absolute -left-[37px] top-1 h-3 w-3 rounded-full bg-sage-dark border-4 border-ivory" />
+                <span className="absolute -left-9.25 top-1 h-3 w-3 rounded-full bg-sage-dark border-4 border-ivory" />
                 <p className="font-serif text-2xl text-sage-dark">{m.year}</p>
                 <p className="mt-2 text-charcoal leading-relaxed">{m.t}</p>
               </Reveal>
@@ -144,44 +149,35 @@ function AboutPage() {
       <section className="py-20 bg-cream/40">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="mb-12 text-center">
-            <p className="eyebrow mb-4">The Team</p>
-            <h2 className="font-serif text-4xl">Faces you'll see at every visit.</h2>
+            <p className="eyebrow mb-4">The Team (Demo Team)</p>
+            <h2 className="font-serif text-4xl">Specialists you can rely on.</h2>
           </Reveal>
-          <RevealStagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Hitendra Singh",
-                role: "Chief Dental Surgeon",
-                img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
-              },
-              {
-                name: "Dr. Priya Nair",
-                role: "Pediatric Dentistry",
-                img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=800&q=80",
-              },
-              {
-                name: "Sister Lakshmi",
-                role: "Head Nurse & Patient Coordinator",
-                img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80",
-              },
-            ].map((p) => (
-              <RevealItem key={p.name} variants={revealItemVariants} className="text-center">
+          <RevealStagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {DEMO_TEAM.map((p) => (
+              <RevealItem
+                key={p.name}
+                variants={revealItemVariants}
+                className="text-center bg-ivory p-5 rounded-sm border border-blush/40"
+              >
                 <img
                   src={p.img}
                   alt={p.name}
-                  className="w-full aspect-[4/5] object-cover rounded-sm"
+                  className="w-full aspect-4/5 object-cover rounded-sm mb-4"
                 />
-                <h3 className="font-serif text-2xl mt-5">{p.name}</h3>
-                <p className="text-sm text-taupe">{p.role}</p>
+                <span className="text-[10px] uppercase font-semibold text-sage-dark bg-sage-dark/10 px-2 py-0.5 rounded-sm">
+                  Demo
+                </span>
+                <h3 className="font-serif text-xl mt-2 text-charcoal">{p.name}</h3>
+                <p className="text-xs text-taupe mt-1 font-medium">{p.role}</p>
               </RevealItem>
             ))}
           </RevealStagger>
           <div className="mt-12 text-center">
             <Link
               to="/doctor"
-              className="inline-flex items-center gap-2 text-sm text-sage-dark hover:text-charcoal"
+              className="inline-flex items-center gap-2 text-sm text-sage-dark hover:text-charcoal font-medium"
             >
-              Meet Dr. Hitendra Singh →
+              Meet all team members (Demo) →
             </Link>
           </div>
         </div>

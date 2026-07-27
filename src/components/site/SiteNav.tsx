@@ -8,7 +8,7 @@ const LINKS = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/doctor", label: "Doctor" },
+  { to: "/doctor", label: "Doctors (Demo)" },
   { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -35,8 +35,8 @@ export function SiteNav() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6">
           <Link to="/" className="group flex items-baseline gap-2">
-            <span className="font-serif text-2xl tracking-tight text-charcoal">Akshaya</span>
-            <span className="font-serif italic text-sage-dark text-lg">dental</span>
+            <span className="font-serif text-2xl tracking-tight text-charcoal">Venkateswara</span>
+            <span className="font-serif italic text-sage-dark text-lg">dental hospital</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -80,10 +80,10 @@ export function SiteNav() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-[60] bg-ivory animate-fade-in lg:hidden">
+        <div className="fixed inset-0 z-60 bg-ivory animate-fade-in lg:hidden">
           <div className="flex items-center justify-between px-6 py-5 border-b border-blush/40">
-            <span className="font-serif text-2xl">
-              Akshaya <span className="italic text-sage-dark">dental</span>
+            <span className="font-serif text-xl">
+              Venkateswara <span className="italic text-sage-dark">dental hospital</span>
             </span>
             <button aria-label="Close" onClick={() => setOpen(false)}>
               <X className="h-6 w-6" />
@@ -95,7 +95,7 @@ export function SiteNav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="font-serif text-4xl text-charcoal hover:text-sage-dark"
+                className="font-serif text-3xl text-charcoal hover:text-sage-dark"
               >
                 {l.label}
               </Link>

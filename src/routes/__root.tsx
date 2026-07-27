@@ -74,17 +74,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Akshaya Dental Hospital — Premium Family Dentistry in Hyderabad" },
+      { title: "Venkateswara Dental Hospital — Best Dentist in Sanath Nagar, Hyderabad" },
       {
         name: "description",
         content:
-          "Akshaya Dental Hospital in Balanagar, Hyderabad. Led by Dr. Hitendra Singh. 4.9★ Google rating. Wisdom tooth extraction, smile correction, family & restorative dentistry.",
+          "Venkateswara Dental Hospital in Sanath Nagar, Hyderabad. 5.0★ Google rated (407 reviews). Dental implants, budget friendly root canals, teeth whitening & cosmetic care.",
       },
-      { name: "author", content: "Akshaya Dental Hospital" },
-      { property: "og:title", content: "Akshaya Dental Hospital" },
+      { name: "author", content: "Venkateswara Dental Hospital" },
+      { property: "og:title", content: "Venkateswara Dental Hospital" },
       {
         property: "og:description",
-        content: "Your Smile, Our Passion — premium family dentistry in Hyderabad.",
+        content: "Best Dental Hospital & Implants in Sanath Nagar, Hyderabad. 5.0★ Google rated.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

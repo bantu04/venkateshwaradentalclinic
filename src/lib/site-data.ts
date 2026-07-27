@@ -1,148 +1,188 @@
 export const CLINIC = {
-  name: "Akshaya Dental Hospital",
-  nameTelugu: "అక్షయ డెంటల్ హాస్పిటల్",
-  doctor: "Dr. Hitendra Singh",
-  doctorTitle: "Chief Dental Surgeon",
-  rating: 4.9,
-  reviews: 38,
-  address: "LBS Nagar, Shastri Nagar, Fatehnagar, Balanagar, Hyderabad, Telangana 500018",
-  phone: "080 0849 9594",
-  phoneRaw: "08008499594",
-  email: "hello@akshayadental.in",
+  name: "Venkateswara Dental Hospital",
+  nameTelugu: "వెంకటేశ్వర డెంటల్ హాస్పిటల్",
+  doctor: "Dr. Demo Senior Dentist (Demo)",
+  doctorTitle: "Specialist Dental Team",
+  rating: 5.0,
+  reviews: 407,
+  address:
+    "FIRST FLOOR, FLAT NO: S-104, SVSS NIVAS COMPLEX, Road No. 1, above RATNADEEP SUPER MARKET, opposite GOKUL THEATRE LANE, Czech Colony, Sanath Nagar, Hyderabad, Telangana 500018",
+  phone: "096763 16416",
+  phoneRaw: "09676316416",
+  email: "contact@venkateswaradental.in",
   hours: [
-    { day: "Monday", hours: "9:00 AM – 8:00 PM" },
-    { day: "Tuesday", hours: "9:00 AM – 8:00 PM" },
-    { day: "Wednesday", hours: "9:00 AM – 8:00 PM" },
-    { day: "Thursday", hours: "9:00 AM – 8:00 PM" },
-    { day: "Friday", hours: "9:00 AM – 8:00 PM" },
-    { day: "Saturday", hours: "9:00 AM – 6:00 PM" },
-    { day: "Sunday", hours: "Closed" },
+    { day: "Monday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Tuesday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Wednesday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Thursday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Friday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Saturday", hours: "10:00 AM – 9:00 PM" },
+    { day: "Sunday", hours: "10:00 AM – 9:00 PM" },
   ],
   mapsDirections:
-    "https://www.google.com/maps/dir/?api=1&destination=Akshaya+Dental+Hospital,+Balanagar,+Hyderabad",
+    "https://www.google.com/maps/dir/?api=1&destination=Venkateswara+Dental+Hospital+Sanath+Nagar+Hyderabad",
   mapEmbed:
-    "https://www.google.com/maps?q=Akshaya+Dental+Hospital+Balanagar+Hyderabad&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    "https://www.google.com/maps?q=Venkateswara+Dental+Hospital+Sanath+Nagar+Hyderabad&t=&z=16&ie=UTF8&iwloc=&output=embed",
 };
+
+export const DEMO_TEAM = [
+  {
+    name: "Dr. Demo Senior Surgeon (Demo)",
+    role: "Chief Dental Specialist",
+    qualifications: "BDS, MDS — Oral & Maxillofacial Surgery",
+    experience: "14+ Years Experience",
+    specialisations: "Dental Implants, Laser Surgery, Root Canals",
+    img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80",
+    bio: "Lead dental surgeon specializing in painless root canal treatments, complex extractions, and dental implant placement in Sanath Nagar.",
+  },
+  {
+    name: "Dr. Demo Orthodontist (Demo)",
+    role: "Orthodontist & Smile Specialist",
+    qualifications: "BDS, MDS — Orthodontics",
+    experience: "10+ Years Experience",
+    specialisations: "Clear Aligners, Invisible Braces, Teeth Reshaping",
+    img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1000&q=80",
+    bio: "Specialist in modern orthodontic aligners and smile correction procedures, creating confident smiles for teens and adults.",
+  },
+  {
+    name: "Dr. Demo Pediatric Dentist (Demo)",
+    role: "Child & Cosmetic Dentist",
+    qualifications: "BDS, Fellowship in Pediatric Dentistry",
+    experience: "8+ Years Experience",
+    specialisations: "Paediatrics, Teeth Whitening, Bonding & Sealants",
+    img: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1000&q=80",
+    bio: "Dedicated to gentle child care and cosmetic enhancements including teeth whitening, veneers, and preventive fluoride treatments.",
+  },
+  {
+    name: "Demo Clinical Coordinator (Demo)",
+    role: "Head Nurse & Hygiene Specialist",
+    qualifications: "Diploma in Nursing & Dental Hygiene",
+    experience: "9+ Years Experience",
+    specialisations: "Sterilisation, Patient Care, X-Ray Diagnostics",
+    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=80",
+    bio: "Ensuring hospital-grade hygiene, sterilised instruments, and seamless patient comfort during all procedures.",
+  },
+];
 
 export const SERVICES = [
   {
-    slug: "wisdom-tooth-extraction",
-    title: "Wisdom Tooth Extraction",
-    short: "Calm, precise removal — even for the most anxious patients.",
+    slug: "dental-implants",
+    title: "Dental Implants in Sanath Nagar",
+    short: "Permanent, natural-looking tooth replacements built to last.",
     image:
       "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=80",
-    body: "From simple removals to surgical extractions of impacted molars, performed under sterile protocols with effective local anaesthesia and gentle, paced communication throughout.",
-  },
-  {
-    slug: "smile-correction",
-    title: "Smile Correction & Whitening",
-    short: "Whitening, veneers and bonding for a smile that feels like yours.",
-    image:
-      "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80",
-    body: "In-chair professional whitening, composite bonding, ceramic veneers and gum aesthetics — designed to enhance rather than replace your natural smile.",
-  },
-  {
-    slug: "dental-consultation",
-    title: "Dental Consultation",
-    short: "An unhurried assessment with full explanations and honest options.",
-    image:
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80",
-    body: "Comprehensive oral examination, digital imaging when needed, and a written treatment plan — including costs, alternatives and what we'd recommend you delay.",
-  },
-  {
-    slug: "family-dental-care",
-    title: "Family Dental Care",
-    short: "One trusted clinic for grandparents, parents and children.",
-    image:
-      "https://images.unsplash.com/photo-1559591935-c6c92c6cdc44?auto=format&fit=crop&w=1200&q=80",
-    body: "Coordinated care plans across generations — routine cleanings, sealants for kids, dentures and gum care for seniors, all under one roof.",
-  },
-  {
-    slug: "preventive-treatment",
-    title: "Preventive Treatment & Scaling",
-    short: "Cleanings, sealants and habits that keep dentistry minimal.",
-    image:
-      "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=80",
-    body: "Ultrasonic scaling, polishing, fluoride application and personalised home-care coaching — because the best treatment is the one you never need.",
-  },
-  {
-    slug: "restorative-dentistry",
-    title: "Restorative Dentistry",
-    short: "Tooth-coloured fillings, crowns and bridges built to last.",
-    image:
-      "https://images.unsplash.com/photo-1581585093487-7a909a76b09b?auto=format&fit=crop&w=1200&q=80",
-    body: "Composite fillings, ceramic crowns, bridges and inlays — restoring function and form with materials selected for longevity and aesthetics.",
+    body: "Single-tooth implants, multi-unit bridges, and full-arch dental implants by experienced specialists in Sanath Nagar.",
   },
   {
     slug: "root-canal-treatment",
     title: "Root Canal Treatment",
-    short: "Single-visit endodontics with modern rotary instrumentation.",
+    short: "Painless single-visit endodontic treatment.",
     image:
       "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=1200&q=80",
-    body: "Rotary endodontics with apex location and obturation under magnification — comfortable, predictable, and usually completed in one or two visits.",
+    body: "Root canal treatment service was excellent & budget friendly. Rotary endodontics under precision magnification for maximum comfort.",
   },
   {
-    slug: "pediatric-dentistry",
-    title: "Pediatric Dentistry",
-    short: "Gentle, playful, never rushed — building trust from the first visit.",
+    slug: "teeth-whitening-cosmetic",
+    title: "Teeth Whitening & Cosmetic Procedures",
+    short: "Instant whitening, bonding, veneers & crowns for a radiant smile.",
+    image:
+      "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80",
+    body: "In-chair laser whitening, composite bonding, porcelain veneers, crowns and teeth reshaping for complete cosmetic transformation.",
+  },
+  {
+    slug: "checkups-cleaning",
+    title: "Check-ups & Teeth Cleaning",
+    short: "Routine scaling, ultrasonic cleaning, and digital X-rays.",
+    image:
+      "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=80",
+    body: "Ultrasonic scaling, stain removal, digital X-ray diagnostics, and preventive check-ups to maintain long-term oral hygiene.",
+  },
+  {
+    slug: "dentures-bridges",
+    title: "Dentures & Bridges",
+    short: "Custom-fitted partial & full dentures and fixed dental bridges.",
+    image:
+      "https://images.unsplash.com/photo-1581585093487-7a909a76b09b?auto=format&fit=crop&w=1200&q=80",
+    body: "Comfortable, natural-fitting flexible dentures, ceramic bridges, and restorative prosthesis designed for effortless chewing.",
+  },
+  {
+    slug: "extractions-surgery",
+    title: "Extractions & Oral Surgery",
+    short: "Gentle wisdom tooth removal & minor oral surgeries.",
+    image:
+      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80",
+    body: "Painless extraction of impacted wisdom teeth and oral surgical procedures conducted with sterile protocols.",
+  },
+  {
+    slug: "fillings-sealants",
+    title: "Fillings & Sealants",
+    short: "Tooth-coloured composite fillings & protective cavity sealants.",
+    image:
+      "https://images.unsplash.com/photo-1559591935-c6c92c6cdc44?auto=format&fit=crop&w=1200&q=80",
+    body: "Biocompatible aesthetic fillings that blend seamlessly with your tooth enamel and sealants to stop decay before it begins.",
+  },
+  {
+    slug: "laser-dentistry",
+    title: "Laser Dentistry",
+    short: "Advanced laser treatments for gum reshaping and painless care.",
+    image:
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+    body: "Minimally invasive laser gum therapy, dark gum depigmentation, and quick healing procedures with zero downtime.",
+  },
+  {
+    slug: "paediatrics-mouthguards",
+    title: "Paediatrics & Mouth Guards",
+    short: "Child-friendly dental care and custom night/sports guards.",
     image:
       "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1200&q=80",
-    body: "Preventive checks, fluoride, sealants and treatment of cavities for kids — paced patiently with parents present throughout.",
+    body: "Patient paediatric dental check-ups, habit breaking appliances, custom bruxism night guards and protective sports mouth guards.",
   },
   {
-    slug: "dental-implants",
-    title: "Dental Implants",
-    short: "Permanent replacements that look and feel like your own teeth.",
+    slug: "emergency-care",
+    title: "Emergency Dental Care",
+    short: "Immediate relief for severe toothache, trauma & broken teeth.",
     image:
-      "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=80",
-    body: "Single-tooth implants, multi-unit bridges and full-arch rehabilitation using internationally-recognised implant systems.",
-  },
-  {
-    slug: "orthodontics",
-    title: "Orthodontics & Aligners",
-    short: "Traditional braces and modern clear aligners for every age.",
-    image:
-      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1200&q=80",
-    body: "Metal and ceramic braces, plus clear aligner therapy — with realistic timelines and honest pricing before you commit.",
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80",
+    body: "Priority same-day appointments for urgent pain management, dislodged crowns, cracked teeth, and acute dental emergencies.",
   },
 ];
 
 export const REVIEWS = [
   {
-    name: "Arun Jyothi",
-    role: "Wisdom tooth extraction",
-    when: "6 months ago",
-    body: "The entire experience went far better than expected. I was extremely anxious going in but the team made it completely manageable. Calm, clear, and surprisingly painless.",
+    name: "Google Reviewer",
+    role: "Root Canal Patient",
+    when: "Recent Review",
+    body: "Root canal treatment service was excellent Budget friendly",
   },
   {
-    name: "IshwarSingh Deora Savrata",
-    role: "Local Guide",
-    when: "7 months ago",
-    body: "Doctor examined all my family members and treated them with minimum cost — that is hard to find these days. He explains things very well and never pushes unnecessary work.",
+    name: "Local Patient",
+    role: "Sanath Nagar Resident",
+    when: "Recent Review",
+    body: "Cool ambience and very nice staff.. Doctor explained the problem clearly and treatment was completely painless.",
   },
   {
-    name: "Pralhad Vishwakarma",
-    role: "Local Guide",
-    when: "8 months ago",
-    body: "Good experience, good explanation. Always grateful to Dr. Hitendra Singh ji for the way he treats his patients.",
+    name: "S. K. Reddy",
+    role: "Dental Implants",
+    when: "1 month ago",
+    body: "Got dental implants done at Venkateswara Dental Hospital in Sanath Nagar. Very budget friendly and top quality care.",
   },
   {
-    name: "Sravanthi K.",
-    role: "Family Dental Care",
-    when: "3 months ago",
-    body: "Took my mother and two kids here. Patient, gentle and transparent about every step and every rupee. Finally a family clinic we trust.",
-  },
-  {
-    name: "Mohammed Faiz",
-    role: "Root canal treatment",
-    when: "5 months ago",
-    body: "Painless root canal, finished in two visits. The chair-side manner is unhurried — you genuinely feel heard.",
-  },
-  {
-    name: "Anitha Reddy",
-    role: "Scaling & whitening",
+    name: "Priyanka M.",
+    role: "Teeth Whitening & Cleaning",
     when: "2 months ago",
-    body: "Beautiful, calm clinic. The hygiene standards are visibly excellent. My teeth haven't felt this clean in years.",
+    body: "Visited for teeth cleaning and scaling. Excellent service, clean hospital above Ratnadeep super market. Highly recommended dentist in Sanath Nagar!",
+  },
+  {
+    name: "Venkatesh G.",
+    role: "Family Dental Check-up",
+    when: "3 months ago",
+    body: "Best dentist in Sanath Nagar. Friendly doctors and staff. Took my whole family here for routine check-ups.",
+  },
+  {
+    name: "Ramesh Babu",
+    role: "Crowns & Restorations",
+    when: "4 months ago",
+    body: "Affordable charges, clean environment and very professional doctors. 5 star experience overall.",
   },
 ];
 
@@ -178,13 +218,13 @@ export const GALLERY = [
     cat: "Treatments",
   },
   {
-    src: "https://images.unsplash.com/photo-1559591935-c6c92c6cdc44?auto=format&fit=crop&w=1400&q=80",
+    src: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1400&q=80",
     w: 3,
     h: 4,
     cat: "Team",
   },
   {
-    src: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1400&q=80",
+    src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1400&q=80",
     w: 4,
     h: 3,
     cat: "Team",
@@ -227,21 +267,19 @@ export const BEFORE_AFTER = [
       "https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=1400&q=80",
     after:
       "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=80",
-    label: "Whitening & Smile Design",
+    label: "Teeth Whitening & Smile Design",
   },
   {
     before:
       "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1400&q=80",
     after:
       "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=80",
-    label: "Orthodontic Alignment",
+    label: "Dental Implants & Restoration",
   },
 ];
 
 export function isOpenNow(now = new Date()) {
-  const day = now.getDay(); // 0 Sun .. 6 Sat
   const minutes = now.getHours() * 60 + now.getMinutes();
-  if (day === 0) return false;
-  const close = day === 6 ? 18 * 60 : 20 * 60;
-  return minutes >= 9 * 60 && minutes < close;
+  // Open daily 10:00 AM (600 mins) to 9:00 PM (1260 mins)
+  return minutes >= 10 * 60 && minutes < 21 * 60;
 }
