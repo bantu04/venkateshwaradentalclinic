@@ -1,104 +1,228 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { MapContact } from "@/components/site/MapContact";
-import { CLINIC } from "@/lib/site-data";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { CLINIC, ALL_SURGERIES_TREATMENTS } from "@/lib/site-data";
+import { Phone, Mail, MapPin, Calendar, Clock, CheckCircle2, Award } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Venkateswara Dental Hospital" },
+      { title: "Book Appointment & Contact — Venkateswara Multi Speciality Dental Clinic" },
       {
         name: "description",
-        content: "Book an appointment at Venkateswara Dental Hospital in Sanath Nagar, Hyderabad.",
+        content:
+          "Book your ₹300 dental consultation at Venkateswara Multi Speciality Dental Clinic in Balanagar, Hyderabad. Call 077991 04626 or schedule online.",
       },
     ],
   }),
   component: ContactPage,
 });
 
-function ContactPage() {
+export function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    treatment: "Root Canal Treatment (RCT)",
+    date: "",
+    session: "Morning (09:30 AM – 01:30 PM)",
+    notes: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <>
       <PageHeader
-        eyebrow="Get in Touch"
-        title="Book your visit."
-        subtitle="Tell us a little about what you need and we'll confirm an appointment within working hours."
+        eyebrow="Appointment & Consultation"
+        title="Book Your Visit (₹300)"
+        subtitle="Select your preferred treatment date & session. Our team will immediately reach out to confirm your slot."
       />
 
-      <section className="pb-20">
-        <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-5 gap-12">
-          <Reveal className="lg:col-span-3">
-            <form
-              className="space-y-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you. We'll call you back shortly.");
-              }}
-            >
-              <div className="grid sm:grid-cols-2 gap-5">
-                <input
-                  required
-                  placeholder="Full name"
-                  className="bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark"
-                />
-                <input
-                  required
-                  placeholder="Phone"
-                  className="bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark"
-                />
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-start">
+          {/* Booking Form */}
+          <Reveal className="lg:col-span-7 bg-ice-bg p-8 rounded-3xl border border-slate-200 shadow-sm">
+            {submitted ? (
+              <div className="text-center py-10 space-y-4">
+                <div className="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="h-8 w-8" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-navy-dark">
+                  Appointment Request Received!
+                </h3>
+                <p className="text-xs text-slate-600 max-w-md mx-auto">
+                  Thank you, <strong>{formData.name}</strong>. Our front desk at Balanagar clinic will call you on <strong>{formData.phone}</strong> to confirm your slot.
+                </p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-4 px-6 py-2.5 bg-teal-brand text-white text-xs font-bold rounded-xl uppercase tracking-wider shadow"
+                >
+                  Book Another Appointment
+                </button>
               </div>
-              <input
-                type="email"
-                placeholder="Email (optional)"
-                className="w-full bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark"
-              />
-              <div className="grid sm:grid-cols-2 gap-5">
-                <input
-                  type="date"
-                  className="bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark"
-                />
-                <select className="bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark">
-                  <option>Preferred time</option>
-                  <option>Morning (9 AM – 12 PM)</option>
-                  <option>Afternoon (12 PM – 4 PM)</option>
-                  <option>Evening (4 PM – 8 PM)</option>
-                </select>
-              </div>
-              <textarea
-                rows={5}
-                placeholder="Tell us a little about what you need"
-                className="w-full bg-ivory border border-blush/60 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-sage-dark"
-              />
-              <button className="rounded-sm bg-sage-dark text-ivory px-7 py-3.5 text-xs uppercase tracking-[0.2em] hover:bg-charcoal transition-colors">
-                Request Appointment
-              </button>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-1">
+                  <h3 className="font-serif text-2xl font-bold text-navy-dark">
+                    Schedule Dental Care
+                  </h3>
+                  <p className="text-xs text-slate-500 font-medium">
+                    Consultation Fee: <strong className="text-teal-brand">₹300</strong> · Dr. Gopi Krishna (BDS, MDS)
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-navy-dark mb-1">
+                      Full Name *
+                    </label>
+                    <input
+                      required
+                      type="text"
+                      placeholder="e.g. Pavan Kumar"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-navy-dark mb-1">
+                      Phone Number *
+                    </label>
+                    <input
+                      required
+                      type="tel"
+                      placeholder="10-digit mobile number"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-navy-dark mb-1">
+                      Select Treatment / Procedure
+                    </label>
+                    <select
+                      value={formData.treatment}
+                      onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
+                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                    >
+                      {ALL_SURGERIES_TREATMENTS.map((t) => (
+                        <option key={t.name} value={t.name}>
+                          {t.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-navy-dark mb-1">
+                      Preferred Date
+                    </label>
+                    <input
+                      required
+                      type="date"
+                      value={formData.date}
+                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                      className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-navy-dark mb-1">
+                    Preferred Session (Sat & Weekdays)
+                  </label>
+                  <select
+                    value={formData.session}
+                    onChange={(e) => setFormData({ ...formData, session: e.target.value })}
+                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                  >
+                    <option value="Morning (09:30 AM – 01:30 PM)">
+                      Morning Session (09:30 AM – 01:30 PM)
+                    </option>
+                    <option value="Evening (05:00 PM – 08:00 PM)">
+                      Evening Session (05:00 PM – 08:00 PM) - Opens 5 PM
+                    </option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-navy-dark mb-1">
+                    Additional Health Notes or Symptoms (Optional)
+                  </label>
+                  <textarea
+                    rows={4}
+                    placeholder="Describe toothache, jaw pain, denture requirements..."
+                    value={formData.notes}
+                    onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-xs text-navy-dark focus:outline-none focus:border-teal-brand shadow-sm"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-teal-brand hover:bg-teal-dark text-white font-bold text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all active:scale-95"
+                >
+                  Confirm Appointment Request (₹300)
+                </button>
+              </form>
+            )}
           </Reveal>
 
-          <Reveal
-            delay={0.1}
-            className="lg:col-span-2 bg-cream/40 border border-blush/40 rounded-sm p-8 h-fit"
-          >
-            <p className="eyebrow mb-4">Direct</p>
-            <ul className="space-y-5 text-sm">
-              <li className="flex items-start gap-3">
-                <Phone className="h-4 w-4 mt-0.5 text-sage-dark" />{" "}
-                <a href={`tel:${CLINIC.phoneRaw}`} className="hover:text-sage-dark">
-                  {CLINIC.phone}
+          {/* Direct Details Sidebar */}
+          <Reveal delay={0.1} className="lg:col-span-5 space-y-6">
+            <div className="bg-navy-dark text-white p-8 rounded-3xl space-y-6 border border-white/10 shadow-xl">
+              <div>
+                <span className="text-amber-gold text-xs font-bold uppercase tracking-wider">
+                  Direct Clinic Desk
+                </span>
+                <h3 className="font-serif text-2xl font-bold mt-1 text-white">Call or Visit Us</h3>
+              </div>
+
+              <div className="space-y-4 text-xs">
+                <a
+                  href={`tel:${CLINIC.phoneRaw}`}
+                  className="flex items-center gap-3 text-amber-gold hover:text-white font-bold text-base transition-colors"
+                >
+                  <Phone className="h-5 w-5 shrink-0" />
+                  <span>{CLINIC.phone}</span>
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="h-4 w-4 mt-0.5 text-sage-dark" />{" "}
-                <a href={`mailto:${CLINIC.email}`} className="hover:text-sage-dark">
-                  {CLINIC.email}
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-0.5 text-sage-dark" /> <span>{CLINIC.address}</span>
-              </li>
-            </ul>
+
+                <div className="flex items-start gap-3 text-slate-300 leading-relaxed">
+                  <MapPin className="h-5 w-5 text-teal-brand shrink-0 mt-0.5" />
+                  <span>{CLINIC.address}</span>
+                </div>
+
+                <div className="flex items-start gap-3 text-slate-300">
+                  <Clock className="h-5 w-5 text-teal-brand shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">Sat & Daily Timings:</p>
+                    <p>Morning: 09:30 AM – 01:30 PM</p>
+                    <p>Evening: 05:00 PM – 08:00 PM (Opens 5 PM)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-white/10 space-y-2 text-xs">
+                <div className="flex items-center gap-2 text-emerald-400 font-semibold">
+                  <Award className="h-4 w-4" /> 26 Years Overall Clinical Experience
+                </div>
+                <div className="flex items-center gap-2 text-slate-300">
+                  ✓ Award Winning Doctor in Twin Cities
+                </div>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>

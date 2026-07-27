@@ -1,36 +1,50 @@
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { GALLERY } from "@/lib/site-data";
+import { GALLERY_IMAGES } from "@/lib/site-data";
 
 export function GalleryGrid({ filter }: { filter?: string }) {
   const [open, setOpen] = useState(-1);
-  const items = filter && filter !== "All" ? GALLERY.filter((g) => g.cat === filter) : GALLERY;
+  const items =
+    filter && filter !== "All"
+      ? GALLERY_IMAGES.filter((g) => g.cat.toLowerCase().includes(filter.toLowerCase()))
+      : GALLERY_IMAGES;
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((g, idx) => (
-          <button
-            key={g.src}
+          <div
+            key={idx}
             onClick={() => setOpen(idx)}
-            className="mb-4 block w-full overflow-hidden rounded-sm group break-inside-avoid"
+            className="group cursor-pointer bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
-            <img
-              src={g.src}
-              alt={g.cat}
-              loading="lazy"
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-              style={{ aspectRatio: `${g.w}/${g.h}` }}
-            />
-          </button>
+            <div className="relative aspect-[4/3] overflow-hidden bg-slate-900">
+              <img
+                src={g.src}
+                alt={g.title}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute top-3 left-3 bg-navy-dark/80 backdrop-blur-md text-amber-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/10">
+                {g.cat}
+              </div>
+            </div>
+            <div className="p-4 space-y-1">
+              <h3 className="font-serif text-lg font-bold text-navy-dark group-hover:text-teal-brand transition-colors">
+                {g.title}
+              </h3>
+              <p className="text-xs text-slate-500">{g.desc}</p>
+            </div>
+          </div>
         ))}
       </div>
+
       <Lightbox
         open={open >= 0}
         index={open >= 0 ? open : 0}
         close={() => setOpen(-1)}
-        slides={items.map((g) => ({ src: g.src }))}
+        slides={items.map((g) => ({ src: g.src, title: g.title, description: g.desc }))}
       />
     </>
   );
