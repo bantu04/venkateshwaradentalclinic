@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal, RevealStagger, RevealItem, revealItemVariants } from "@/components/site/Reveal";
 import { MapContact } from "@/components/site/MapContact";
 import { CLINIC, DOCTORS } from "@/lib/site-data";
+import drGopiImg from "@/assets/dr-gopi-krishna.png";
 import { Award, Heart, ShieldCheck, Sparkles, Phone, Calendar, CheckCircle } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -54,57 +55,57 @@ export function AboutPage() {
       />
 
       {/* Main Story Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-navy-dark relative overflow-hidden bg-mesh-glow">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 relative">
             <img
-              src={drGopi.img}
+              src={drGopiImg}
               alt={drGopi.name}
-              className="w-full aspect-[4/5] object-cover object-top rounded-3xl border-4 border-slate-100 shadow-xl"
+              className="w-full aspect-4/5 object-cover object-top rounded-3xl border-2 border-white/20 shadow-2xl"
             />
-            <div className="absolute -bottom-6 -right-6 bg-navy-dark text-white p-5 rounded-2xl shadow-xl hidden sm:block border border-white/10">
-              <div className="font-serif text-3xl font-bold text-amber-gold">97% (653)</div>
+            <div className="absolute -bottom-6 -right-6 glass-card p-5 rounded-2xl shadow-xl hidden sm:block border border-white/10">
+              <div className="font-syne text-3xl font-black text-amber-gold">97% (653)</div>
               <div className="text-[11px] text-slate-300 font-medium">Practo Verified Satisfaction</div>
             </div>
           </div>
 
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal-brand bg-teal-brand/10 px-3 py-1 rounded-full">
+            <span className="text-xs font-extrabold uppercase tracking-wider text-cyan-glow bg-cyan-500/10 px-3.5 py-1 rounded-full border border-cyan-500/30">
               Established Excellence
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-dark">
-              Centrally Located at Balanagar, <span className="italic text-teal-brand">Hyderabad</span>
+            <h2 className="font-syne text-3xl sm:text-4xl font-extrabold text-white">
+              Centrally Located at Balanagar, <span className="text-cyan-glow">Hyderabad</span>
             </h2>
-            <p className="text-slate-600 text-base leading-relaxed">
+            <p className="text-slate-300 text-base leading-relaxed">
               {CLINIC.summaryStatement}
             </p>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-300 text-sm leading-relaxed">
               Led by <strong>Dr. Gopi Krishna (BDS, MDS - Prosthodontist And Crown Bridge)</strong> with over 26 years of overall experience, our clinic has earned a reputation across Hyderabad and Secunderabad for gentle, budget-friendly, and non-commercial tooth care.
             </p>
 
-            <div className="pt-2 grid sm:grid-cols-2 gap-3 text-xs text-navy-dark">
+            <div className="pt-2 grid sm:grid-cols-2 gap-3 text-xs text-slate-200 font-medium">
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-teal-brand shrink-0" />
-                <span className="font-semibold">Balanagar Main Rd, Opp. Hotel Samrat Lane</span>
+                <CheckCircle className="h-4 w-4 text-cyan-glow shrink-0" />
+                <span>Balanagar Main Rd, Opp. Hotel Samrat Lane</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-teal-brand shrink-0" />
-                <span className="font-semibold">₹300 Consultation Fee</span>
+                <CheckCircle className="h-4 w-4 text-cyan-glow shrink-0" />
+                <span>₹300 Consultation Fee</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-teal-brand shrink-0" />
-                <span className="font-semibold">Single Visit Rotary Root Canals</span>
+                <CheckCircle className="h-4 w-4 text-cyan-glow shrink-0" />
+                <span>Single Visit Rotary Root Canals</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-teal-brand shrink-0" />
-                <span className="font-semibold">29 Surgeries & Treatments</span>
+                <CheckCircle className="h-4 w-4 text-cyan-glow shrink-0" />
+                <span>29 Surgeries & Treatments</span>
               </div>
             </div>
 
             <div className="pt-4 flex items-center gap-4">
               <Link
                 to="/contact"
-                className="flex items-center gap-2 rounded-xl bg-teal-brand px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-teal-dark transition-all shadow"
+                className="flex items-center gap-2 rounded-xl bg-cyan-glow px-6 py-3.5 text-xs font-black uppercase tracking-wider text-slate-950 hover:bg-white transition-all shadow-lg"
               >
                 <Calendar className="h-4 w-4" /> Book Appointment (₹300)
               </Link>
@@ -114,23 +115,23 @@ export function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-24 bg-ice-bg border-t border-slate-200">
+      <section className="py-16 md:py-24 bg-slate-950 border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
             <p className="eyebrow">Core Values</p>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-navy-dark">
-              Why Patients Trust <span className="italic text-teal-brand">Venkateswara Dental</span>
+            <h2 className="font-syne text-3xl sm:text-4xl font-bold text-white">
+              Why Patients Trust <span className="text-cyan-glow">Venkateswara Dental</span>
             </h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {CLINIC_VALUES.map(({ icon: Icon, t, d }) => (
-              <div key={t} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-teal-brand/10 text-teal-brand flex items-center justify-center">
+              <div key={t} className="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+                <div className="h-10 w-10 rounded-xl bg-cyan-500/20 text-cyan-glow flex items-center justify-center">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy-dark">{t}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{d}</p>
+                <h3 className="font-syne text-xl font-bold text-white">{t}</h3>
+                <p className="text-xs text-slate-300 leading-relaxed">{d}</p>
               </div>
             ))}
           </div>

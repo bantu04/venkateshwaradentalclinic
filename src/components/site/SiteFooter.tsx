@@ -4,19 +4,19 @@ import { CLINIC, ALL_SURGERIES_TREATMENTS } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-navy-dark text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand info */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-teal-brand text-white font-serif font-bold text-xl flex items-center justify-center">
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 text-slate-950 font-syne font-black text-xl flex items-center justify-center shadow-lg">
               V
             </div>
             <div>
-              <h3 className="font-serif text-lg font-bold text-white leading-none">
+              <h3 className="font-syne text-lg font-bold text-white leading-none">
                 Venkateswara
               </h3>
-              <p className="text-[10px] text-teal-brand font-semibold uppercase tracking-wider mt-0.5">
+              <p className="text-[10px] text-cyan-glow font-extrabold uppercase tracking-wider mt-1">
                 Multi Speciality Dental Clinic
               </p>
             </div>
@@ -35,15 +35,15 @@ export function SiteFooter() {
 
         {/* Popular Treatments */}
         <div>
-          <p className="text-xs font-bold uppercase tracking-wider text-amber-gold mb-4">
+          <p className="font-syne text-xs font-bold uppercase tracking-wider text-amber-gold mb-4">
             Popular Treatments
           </p>
-          <ul className="space-y-2.5 text-xs">
+          <ul className="space-y-2.5 text-xs font-medium">
             {ALL_SURGERIES_TREATMENTS.slice(0, 7).map((s) => (
               <li key={s.name}>
                 <Link
                   to="/services"
-                  className="hover:text-teal-brand transition-colors text-slate-300"
+                  className="hover:text-cyan-glow transition-colors text-slate-300"
                 >
                   {s.name}
                 </Link>
@@ -54,42 +54,42 @@ export function SiteFooter() {
 
         {/* Quick Links */}
         <div>
-          <p className="text-xs font-bold uppercase tracking-wider text-amber-gold mb-4">
+          <p className="font-syne text-xs font-bold uppercase tracking-wider text-amber-gold mb-4">
             Quick Navigation
           </p>
-          <ul className="space-y-2.5 text-xs">
+          <ul className="space-y-2.5 text-xs font-medium">
             <li>
-              <Link to="/" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/" className="hover:text-cyan-glow transition-colors text-slate-300">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/doctor" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/doctor" className="hover:text-cyan-glow transition-colors text-slate-300">
                 Dr. Gopi Krishna (BDS, MDS)
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/services" className="hover:text-cyan-glow transition-colors text-slate-300">
                 29 Surgeries & Treatments
               </Link>
             </li>
             <li>
-              <Link to="/reviews" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/reviews" className="hover:text-cyan-glow transition-colors text-slate-300">
                 653+ Verified Patient Stories
               </Link>
             </li>
             <li>
-              <Link to="/gallery" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/gallery" className="hover:text-cyan-glow transition-colors text-slate-300">
                 Clinic Gallery
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/about" className="hover:text-cyan-glow transition-colors text-slate-300">
                 About Clinic
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-teal-brand transition-colors text-slate-300">
+              <Link to="/contact" className="hover:text-cyan-glow transition-colors text-slate-300">
                 Book Visit (₹300)
               </Link>
             </li>
@@ -98,25 +98,25 @@ export function SiteFooter() {
 
         {/* Contact Info */}
         <div className="space-y-4">
-          <p className="text-xs font-bold uppercase tracking-wider text-amber-gold mb-2">
+          <p className="font-syne text-xs font-bold uppercase tracking-wider text-amber-gold mb-2">
             Clinic Contact
           </p>
           <div className="space-y-3 text-xs">
             <a
               href={`tel:${CLINIC.phoneRaw}`}
-              className="flex items-center gap-2.5 text-amber-gold hover:text-white font-bold transition-colors"
+              className="flex items-center gap-2.5 text-cyan-glow hover:text-white font-extrabold text-sm transition-colors"
             >
               <Phone className="h-4 w-4 shrink-0" />
               <span>{CLINIC.phone}</span>
             </a>
 
-            <div className="flex items-start gap-2.5 text-slate-300 leading-relaxed">
-              <MapPin className="h-4 w-4 text-teal-brand shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2.5 text-slate-300 leading-relaxed font-normal">
+              <MapPin className="h-4 w-4 text-cyan-glow shrink-0 mt-0.5" />
               <span>{CLINIC.address}</span>
             </div>
 
             <div className="pt-2 border-t border-white/10 text-[11px] text-slate-400 space-y-1">
-              <p className="font-semibold text-white">Consultation Fee: ₹300</p>
+              <p className="font-bold text-emerald-400">Consultation Fee: ₹300</p>
               <p>Sat & Weekdays: 09:30 AM–01:30 PM, 05:00 PM–08:00 PM</p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export function SiteFooter() {
       </div>
 
       <div className="mt-12 pt-6 border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
           <p>© {new Date().getFullYear()} Venkateswara Multi Speciality Dental Clinic. All rights reserved.</p>
           <p>Hno 36, Balanagar Main Rd, Ferozguda, Hyderabad, Telangana 500042</p>
         </div>

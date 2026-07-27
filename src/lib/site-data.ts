@@ -1,3 +1,5 @@
+import drGopiImg from "@/assets/dr-gopi-krishna.png";
+
 export const CLINIC = {
   name: "Venkateswara Multi Speciality Dental Clinic",
   shortName: "Venkateswara Dental Clinic",
@@ -43,7 +45,7 @@ export const DOCTORS = [
     stories: 653,
     fee: "₹300",
     badge: "Award Winning Doctor in Twin Cities",
-    img: "/images/dr-gopi-krishna.png",
+    img: drGopiImg,
     bio: "Dr. Gopi Krishna is an Award-Winning Prosthodontist with over 26 years of distinguished clinical experience in the twin cities. Renowned for his non-commercial philosophy, patient empathy, and high-precision dental treatments including Painless Root Canal Treatment (RCT), Ceramic Crowns, Dental Implants, and Dentures.",
     highlights: [
       "26+ Years Clinical Excellence",
@@ -63,7 +65,7 @@ export const DOCTORS = [
     fee: "₹300",
     badge: "Patient Recommended Dentist",
     img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=80",
-    bio: "Dr. Vinay is widely appreciated for his comforting chairside manner, friendly atmosphere, and gentle handling of complex toothextractions, pain relief, dental fillings, and preventive care.",
+    bio: "Dr. Vinay is widely appreciated for his comforting chairside manner, friendly atmosphere, and gentle handling of complex tooth extractions, pain relief, dental fillings, and preventive care.",
     highlights: [
       "Warm & Welcoming Hospitality",
       "Painless Tooth Extractions & Fillings",
@@ -461,7 +463,7 @@ export const GOOGLE_REVIEWS = [
 
 export const GALLERY_IMAGES = [
   {
-    src: "/images/dr-gopi-krishna.png",
+    src: drGopiImg,
     cat: "Doctors",
     title: "Dr. Gopi Krishna (BDS, MDS)",
     desc: "Chief Prosthodontist & Crown Bridge Specialist",
@@ -539,4 +541,3 @@ export function isOpenNow() {
 
   return (mins >= morningOpen && mins <= morningClose) || (mins >= eveningOpen && mins <= eveningClose);
 }
-
