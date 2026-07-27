@@ -1,4 +1,12 @@
-import { Phone, MapPin, Clock, ArrowUpRight, Calendar, CheckCircle2, ShieldCheck } from "lucide-react";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  ArrowUpRight,
+  Calendar,
+  CheckCircle2,
+  ShieldCheck,
+} from "lucide-react";
 import { CLINIC, isOpenNow } from "@/lib/site-data";
 
 export function MapContact() {
@@ -8,11 +16,11 @@ export function MapContact() {
     <section id="contact" className="py-20 md:py-28 bg-slate-950 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-12 gap-10 items-stretch">
         {/* Google Map Container */}
-        <div className="lg:col-span-6 rounded-3xl overflow-hidden border border-white/15 shadow-2xl min-h-[380px]">
+        <div className="lg:col-span-6 rounded-3xl overflow-hidden border border-white/15 shadow-2xl min-h-95">
           <iframe
             title="Venkateswara Multi Speciality Dental Clinic Location"
             src={CLINIC.mapEmbed}
-            className="w-full h-full min-h-[380px] border-0"
+            className="w-full h-full min-h-95 border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

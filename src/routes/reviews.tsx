@@ -3,7 +3,15 @@ import { useState } from "react";
 import { PageHeader } from "@/components/site/PageHeader";
 import { MapContact } from "@/components/site/MapContact";
 import { PATIENT_STORIES, GOOGLE_REVIEWS, CLINIC } from "@/lib/site-data";
-import { Star, MessageSquareQuote, CheckCircle, Award, Phone, Calendar, Search } from "lucide-react";
+import {
+  Star,
+  MessageSquareQuote,
+  CheckCircle,
+  Award,
+  Phone,
+  Calendar,
+  Search,
+} from "lucide-react";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -124,16 +132,16 @@ export function ReviewsPage() {
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h3 className="font-syne text-lg font-bold text-white">
-                          {story.author}
-                        </h3>
+                        <h3 className="font-syne text-lg font-bold text-white">{story.author}</h3>
                         {story.verified && (
                           <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
                             Verified Patient
                           </span>
                         )}
                       </div>
-                      <p className="text-xs text-slate-400">{story.timeAgo} · Visited {story.doctorName}</p>
+                      <p className="text-xs text-slate-400">
+                        {story.timeAgo} · Visited {story.doctorName}
+                      </p>
                     </div>
                   </div>
 
@@ -192,7 +200,10 @@ export function ReviewsPage() {
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               {GOOGLE_REVIEWS.map((g, i) => (
-                <div key={i} className="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+                <div
+                  key={i}
+                  className="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2"
+                >
                   <div className="flex gap-1 text-amber-gold">
                     {[...Array(5)].map((_, s) => (
                       <Star key={s} className="h-3.5 w-3.5 fill-amber-gold" />

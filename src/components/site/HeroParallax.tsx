@@ -1,5 +1,15 @@
 import { motion } from "framer-motion";
-import { Phone, Calendar, Star, Award, ShieldCheck, MapPin, CheckCircle2, UserCheck, Sparkles } from "lucide-react";
+import {
+  Phone,
+  Calendar,
+  Star,
+  Award,
+  ShieldCheck,
+  MapPin,
+  CheckCircle2,
+  UserCheck,
+  Sparkles,
+} from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { CLINIC, DOCTORS } from "@/lib/site-data";
 import drGopiImg from "@/assets/dr-gopi-krishna.png";
@@ -29,7 +39,7 @@ export function HeroParallax() {
 
             <h1 className="font-syne text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-white tracking-tight">
               Venkateswara <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-amber-300 font-syne">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-teal-300 to-amber-300 font-syne">
                 Multi Speciality
               </span>{" "}
               Dental Clinic
@@ -49,8 +59,12 @@ export function HeroParallax() {
                   <Star className="h-5 w-5 fill-amber-gold text-amber-gold" />
                 </div>
                 <div>
-                  <div className="text-lg font-extrabold text-white leading-none font-syne">97% (653)</div>
-                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">Practo Satisfaction</div>
+                  <div className="text-lg font-extrabold text-white leading-none font-syne">
+                    97% (653)
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">
+                    Practo Satisfaction
+                  </div>
                 </div>
               </div>
 
@@ -59,8 +73,12 @@ export function HeroParallax() {
                   <Award className="h-5 w-5 text-amber-gold" />
                 </div>
                 <div>
-                  <div className="text-lg font-extrabold text-white leading-none font-syne">26+ Years</div>
-                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">Overall Experience</div>
+                  <div className="text-lg font-extrabold text-white leading-none font-syne">
+                    26+ Years
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">
+                    Overall Experience
+                  </div>
                 </div>
               </div>
 
@@ -69,8 +87,12 @@ export function HeroParallax() {
                   <UserCheck className="h-5 w-5 text-emerald-400" />
                 </div>
                 <div>
-                  <div className="text-lg font-extrabold text-white leading-none font-syne">₹300</div>
-                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">Consultation Fee</div>
+                  <div className="text-lg font-extrabold text-white leading-none font-syne">
+                    ₹300
+                  </div>
+                  <div className="text-[11px] text-slate-400 mt-1 font-semibold">
+                    Consultation Fee
+                  </div>
                 </div>
               </div>
             </div>
@@ -79,7 +101,7 @@ export function HeroParallax() {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 px-7 py-4 text-xs font-black uppercase tracking-wider text-slate-950 shadow-xl hover:shadow-cyan-500/25 transition-all hover:scale-105 active:scale-95"
+                className="flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-cyan-500 to-teal-500 px-7 py-4 text-xs font-black uppercase tracking-wider text-slate-950 shadow-xl hover:shadow-cyan-500/25 transition-all hover:scale-105 active:scale-95"
               >
                 <Calendar className="h-4 w-4" />
                 <span>Book Appointment (₹300)</span>
@@ -148,7 +170,10 @@ export function HeroParallax() {
               {/* Key Bullet Highlights */}
               <div className="mt-4 pt-3 border-t border-white/10 space-y-2">
                 {drGopi.highlights.map((h, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 text-xs text-slate-300 font-medium"
+                  >
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-glow shrink-0" />
                     <span>{h}</span>
                   </div>

@@ -70,7 +70,7 @@ export function SiteNav() {
           <div className="flex items-center justify-between gap-4">
             {/* Brand Logo */}
             <Link to="/" className="group flex items-center gap-3">
-              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 text-slate-950 flex items-center justify-center font-syne font-black text-xl shadow-lg group-hover:scale-105 transition-transform">
+              <div className="h-10 w-10 rounded-xl bg-linear-to-br from-cyan-500 to-teal-600 text-slate-950 flex items-center justify-center font-syne font-black text-xl shadow-lg group-hover:scale-105 transition-transform">
                 V
               </div>
               <div className="flex flex-col">
@@ -91,7 +91,8 @@ export function SiteNav() {
                   to={link.to}
                   className="text-xs font-bold text-slate-300 hover:text-white px-3.5 py-1.5 rounded-lg transition-all relative"
                   activeProps={{
-                    className: "bg-cyan-500/20 text-cyan-glow font-extrabold border border-cyan-500/30 shadow-sm",
+                    className:
+                      "bg-cyan-500/20 text-cyan-glow font-extrabold border border-cyan-500/30 shadow-sm",
                   }}
                   activeOptions={{ exact: link.to === "/" }}
                 >
@@ -112,7 +113,7 @@ export function SiteNav() {
 
               <Link
                 to="/contact"
-                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 px-5 py-2.5 text-xs font-black uppercase tracking-wider text-slate-950 shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-105 active:scale-95"
+                className="flex items-center gap-2 rounded-xl bg-linear-to-r from-cyan-500 to-teal-500 px-5 py-2.5 text-xs font-black uppercase tracking-wider text-slate-950 shadow-lg hover:shadow-cyan-500/25 transition-all hover:scale-105 active:scale-95"
               >
                 <Calendar className="h-3.5 w-3.5" />
                 <span>Book ₹300 Visit</span>

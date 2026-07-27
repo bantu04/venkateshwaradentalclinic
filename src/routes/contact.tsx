@@ -57,7 +57,8 @@ export function ContactPage() {
                   Appointment Request Received!
                 </h3>
                 <p className="text-xs text-slate-300 max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. Our front desk at Balanagar clinic will call you on <strong>{formData.phone}</strong> to confirm your slot.
+                  Thank you, <strong>{formData.name}</strong>. Our front desk at Balanagar clinic
+                  will call you on <strong>{formData.phone}</strong> to confirm your slot.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -69,19 +70,16 @@ export function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-1">
-                  <h3 className="font-syne text-2xl font-bold text-white">
-                    Schedule Dental Care
-                  </h3>
+                  <h3 className="font-syne text-2xl font-bold text-white">Schedule Dental Care</h3>
                   <p className="text-xs text-slate-400 font-medium">
-                    Consultation Fee: <strong className="text-cyan-glow">₹300</strong> · Dr. Gopi Krishna (BDS, MDS)
+                    Consultation Fee: <strong className="text-cyan-glow">₹300</strong> · Dr. Gopi
+                    Krishna (BDS, MDS)
                   </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-white mb-1">
-                      Full Name *
-                    </label>
+                    <label className="block text-xs font-bold text-white mb-1">Full Name *</label>
                     <input
                       required
                       type="text"
@@ -172,7 +170,7 @@ export function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-slate-950 font-black text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all active:scale-95"
+                  className="w-full bg-linear-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-slate-950 font-black text-xs uppercase tracking-wider py-4 rounded-xl shadow-lg transition-all active:scale-95"
                 >
                   Confirm Appointment Request (₹300)
                 </button>

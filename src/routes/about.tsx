@@ -65,7 +65,9 @@ export function AboutPage() {
             />
             <div className="absolute -bottom-6 -right-6 glass-card p-5 rounded-2xl shadow-xl hidden sm:block border border-white/10">
               <div className="font-syne text-3xl font-black text-amber-gold">97% (653)</div>
-              <div className="text-[11px] text-slate-300 font-medium">Practo Verified Satisfaction</div>
+              <div className="text-[11px] text-slate-300 font-medium">
+                Practo Verified Satisfaction
+              </div>
             </div>
           </div>
 
@@ -76,11 +78,11 @@ export function AboutPage() {
             <h2 className="font-syne text-3xl sm:text-4xl font-extrabold text-white">
               Centrally Located at Balanagar, <span className="text-cyan-glow">Hyderabad</span>
             </h2>
-            <p className="text-slate-300 text-base leading-relaxed">
-              {CLINIC.summaryStatement}
-            </p>
+            <p className="text-slate-300 text-base leading-relaxed">{CLINIC.summaryStatement}</p>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Led by <strong>Dr. Gopi Krishna (BDS, MDS - Prosthodontist And Crown Bridge)</strong> with over 26 years of overall experience, our clinic has earned a reputation across Hyderabad and Secunderabad for gentle, budget-friendly, and non-commercial tooth care.
+              Led by <strong>Dr. Gopi Krishna (BDS, MDS - Prosthodontist And Crown Bridge)</strong>{" "}
+              with over 26 years of overall experience, our clinic has earned a reputation across
+              Hyderabad and Secunderabad for gentle, budget-friendly, and non-commercial tooth care.
             </p>
 
             <div className="pt-2 grid sm:grid-cols-2 gap-3 text-xs text-slate-200 font-medium">

@@ -80,7 +80,12 @@ function Index() {
             { value: 26, label: "Years Experience", suffix: "+ Yrs", sub: "Overall Clinical Care" },
             { value: 97, label: "Practo Rating", suffix: "%", sub: "Based on 653 Votes" },
             { value: 624, label: "Google Reviews", suffix: "+", sub: "4.6★ Verified Rating" },
-            { value: 29, label: "Surgeries & Treatments", suffix: "+", sub: "Full Spectrum Dental" },
+            {
+              value: 29,
+              label: "Surgeries & Treatments",
+              suffix: "+",
+              sub: "Full Spectrum Dental",
+            },
           ].map((stat, idx) => (
             <Reveal key={stat.label} delay={idx * 0.08} className="space-y-1">
               <div className="font-syne text-3xl sm:text-4xl lg:text-5xl font-black text-cyan-glow">
@@ -104,7 +109,8 @@ function Index() {
               Meet Our Award-Winning <span className="text-cyan-glow">Dental Specialists</span>
             </h2>
             <p className="text-slate-300 text-sm sm:text-base">
-              Dedicated to compassionate, non-commercial, and high-precision dental care in Balanagar, Hyderabad.
+              Dedicated to compassionate, non-commercial, and high-precision dental care in
+              Balanagar, Hyderabad.
             </p>
           </div>
 
@@ -136,7 +142,9 @@ function Index() {
                     <Award className="h-3.5 w-3.5" />
                     <span>26 Years Experience Overall</span>
                   </div>
-                  <h3 className="font-syne text-2xl sm:text-3xl font-extrabold">{DOCTORS[0].name}</h3>
+                  <h3 className="font-syne text-2xl sm:text-3xl font-extrabold">
+                    {DOCTORS[0].name}
+                  </h3>
                   <p className="text-xs text-cyan-glow font-bold">{DOCTORS[0].title}</p>
 
                   <p className="text-xs text-slate-300 leading-relaxed font-normal pt-1">
@@ -146,7 +154,9 @@ function Index() {
                   <div className="pt-2 grid grid-cols-2 gap-2 text-xs">
                     <div className="bg-white/10 rounded-xl p-2.5 text-center border border-white/10">
                       <span className="block font-black text-amber-gold font-syne">97% Rating</span>
-                      <span className="text-[10px] text-slate-300 font-medium">653 Practo Votes</span>
+                      <span className="text-[10px] text-slate-300 font-medium">
+                        653 Practo Votes
+                      </span>
                     </div>
                     <div className="bg-white/10 rounded-xl p-2.5 text-center border border-white/10">
                       <span className="block font-black text-emerald-400 font-syne">₹300 Fee</span>
@@ -237,7 +247,8 @@ function Index() {
                 Featured <span className="text-cyan-glow">Treatments & Surgeries</span>
               </h2>
               <p className="text-slate-400 text-sm sm:text-base">
-                Painless single-sitting root canal treatments, ceramic crowns, implants, dentures, and aesthetic dentistry.
+                Painless single-sitting root canal treatments, ceramic crowns, implants, dentures,
+                and aesthetic dentistry.
               </p>
             </div>
 
@@ -298,7 +309,7 @@ function Index() {
           <div className="mt-14 text-center">
             <Link
               to="/services"
-              className="inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-cyan-500 via-teal-500 to-amber-500 px-9 py-4 text-xs font-black uppercase tracking-wider text-slate-950 shadow-2xl hover:scale-105 transition-all"
+              className="inline-flex items-center justify-center gap-3 rounded-2xl bg-linear-to-r from-cyan-500 via-teal-500 to-amber-500 px-9 py-4 text-xs font-black uppercase tracking-wider text-slate-950 shadow-2xl hover:scale-105 transition-all"
             >
               <span>Browse All 29 Surgeries & Treatments</span>
               <ArrowUpRight className="h-4 w-4" />
@@ -316,7 +327,8 @@ function Index() {
               Patient Stories for <span className="text-cyan-glow">Venkateswara Clinic</span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base">
-              Real opinions & feedback from verified patients across twin cities regarding Dr. Gopi Krishna & Dr. Vinay.
+              Real opinions & feedback from verified patients across twin cities regarding Dr. Gopi
+              Krishna & Dr. Vinay.
             </p>
           </div>
 
@@ -343,7 +355,8 @@ function Index() {
               Smile <span className="text-cyan-glow">Restoration Gallery</span>
             </h2>
             <p className="text-slate-400 text-sm">
-              Compare before & after results of root canal treatments, ceramic crowns, dentures, and whitening.
+              Compare before & after results of root canal treatments, ceramic crowns, dentures, and
+              whitening.
             </p>
           </div>
 

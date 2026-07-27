@@ -71,7 +71,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Venkateswara Multi Speciality Dental Clinic — Dr. Gopi Krishna | Balanagar, Hyderabad" },
+      {
+        title:
+          "Venkateswara Multi Speciality Dental Clinic — Dr. Gopi Krishna | Balanagar, Hyderabad",
+      },
       {
         name: "description",
         content:
@@ -81,7 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Venkateswara Multi Speciality Dental Clinic" },
       {
         property: "og:description",
-        content: "Top-rated dental clinic in Balanagar, Hyderabad. Dr. Gopi Krishna (26+ Yrs Exp). 97% Satisfaction (653 Votes).",
+        content:
+          "Top-rated dental clinic in Balanagar, Hyderabad. Dr. Gopi Krishna (26+ Yrs Exp). 97% Satisfaction (653 Votes).",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -5,7 +5,16 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { MapContact } from "@/components/site/MapContact";
 import { ALL_SURGERIES_TREATMENTS, CLINIC } from "@/lib/site-data";
-import { Search, ChevronRight, Phone, Calendar, CheckCircle2, Shield, Sparkles, Activity } from "lucide-react";
+import {
+  Search,
+  ChevronRight,
+  Phone,
+  Calendar,
+  CheckCircle2,
+  Shield,
+  Sparkles,
+  Activity,
+} from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -154,7 +163,8 @@ export function ServicesPage() {
               Unsure which treatment fits your condition?
             </h3>
             <p className="text-sm text-slate-300 max-w-xl mx-auto">
-              Schedule a comprehensive diagnostic consultation with Dr. Gopi Krishna or Dr. Vinay for just ₹300.
+              Schedule a comprehensive diagnostic consultation with Dr. Gopi Krishna or Dr. Vinay
+              for just ₹300.
             </p>
             <div className="pt-2 flex flex-wrap justify-center gap-4">
               <Link

@@ -539,5 +539,7 @@ export function isOpenNow() {
   const eveningOpen = 17 * 60; // 17:00
   const eveningClose = 20 * 60; // 20:00
 
-  return (mins >= morningOpen && mins <= morningClose) || (mins >= eveningOpen && mins <= eveningClose);
+  return (
+    (mins >= morningOpen && mins <= morningClose) || (mins >= eveningOpen && mins <= eveningClose)
+  );
 }

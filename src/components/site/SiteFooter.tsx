@@ -9,13 +9,11 @@ export function SiteFooter() {
         {/* Brand info */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 text-slate-950 font-syne font-black text-xl flex items-center justify-center shadow-lg">
+            <div className="h-9 w-9 rounded-xl bg-linear-to-br from-cyan-500 to-teal-600 text-slate-950 font-syne font-black text-xl flex items-center justify-center shadow-lg">
               V
             </div>
             <div>
-              <h3 className="font-syne text-lg font-bold text-white leading-none">
-                Venkateswara
-              </h3>
+              <h3 className="font-syne text-lg font-bold text-white leading-none">Venkateswara</h3>
               <p className="text-[10px] text-cyan-glow font-extrabold uppercase tracking-wider mt-1">
                 Multi Speciality Dental Clinic
               </p>
@@ -23,7 +21,8 @@ export function SiteFooter() {
           </div>
 
           <p className="text-xs text-slate-400 leading-relaxed font-normal">
-            Centrally located at Balanagar in Hyderabad. Led by Dr. Gopi Krishna (BDS, MDS - Prosthodontist & Crown Bridge Specialist, 26+ Yrs Exp).
+            Centrally located at Balanagar in Hyderabad. Led by Dr. Gopi Krishna (BDS, MDS -
+            Prosthodontist & Crown Bridge Specialist, 26+ Yrs Exp).
           </p>
 
           <div className="flex items-center gap-2 text-xs bg-white/5 p-3 rounded-xl border border-white/10">
@@ -69,7 +68,10 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-cyan-glow transition-colors text-slate-300">
+              <Link
+                to="/services"
+                className="hover:text-cyan-glow transition-colors text-slate-300"
+              >
                 29 Surgeries & Treatments
               </Link>
             </li>
@@ -125,7 +127,10 @@ export function SiteFooter() {
 
       <div className="mt-12 pt-6 border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
-          <p>© {new Date().getFullYear()} Venkateswara Multi Speciality Dental Clinic. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Venkateswara Multi Speciality Dental Clinic. All rights
+            reserved.
+          </p>
           <p>Hno 36, Balanagar Main Rd, Ferozguda, Hyderabad, Telangana 500042</p>
         </div>
       </div>

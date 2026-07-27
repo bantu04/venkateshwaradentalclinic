@@ -127,9 +127,12 @@ export function DoctorPage() {
                   <div className="h-9 w-9 rounded-xl bg-amber-gold/20 flex items-center justify-center text-amber-gold mb-3">
                     <Heart className="h-5 w-5" />
                   </div>
-                  <h3 className="font-syne text-lg font-bold text-white">Non-Commercial Philosophy</h3>
+                  <h3 className="font-syne text-lg font-bold text-white">
+                    Non-Commercial Philosophy
+                  </h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    Patients consistently praise Dr. Gopi Krishna for performing fillings or procedures only when compulsory required, ensuring true trust.
+                    Patients consistently praise Dr. Gopi Krishna for performing fillings or
+                    procedures only when compulsory required, ensuring true trust.
                   </p>
                 </div>
 
@@ -139,7 +142,8 @@ export function DoctorPage() {
                   </div>
                   <h3 className="font-syne text-lg font-bold text-white">Rotary RCT & Crowns</h3>
                   <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                    Specialized in pain-free single & multi-sitting Root Canal Treatments, all types of ceramic crowns, and fixed partial dentures.
+                    Specialized in pain-free single & multi-sitting Root Canal Treatments, all types
+                    of ceramic crowns, and fixed partial dentures.
                   </p>
                 </div>
               </div>
@@ -177,7 +181,9 @@ export function DoctorPage() {
                   <p className="text-sm font-semibold text-white">
                     Morning: 09:30 AM – 01:30 PM | Evening: 05:00 PM – 08:00 PM
                   </p>
-                  <p className="text-xs text-slate-300">Consultation Fee: ₹300 at Balanagar Clinic</p>
+                  <p className="text-xs text-slate-300">
+                    Consultation Fee: ₹300 at Balanagar Clinic
+                  </p>
                 </div>
 
                 <Link
@@ -212,7 +218,9 @@ export function DoctorPage() {
               <p className="text-sm text-slate-300 leading-relaxed font-normal">{drVinay.bio}</p>
 
               <div className="bg-white/5 p-4 rounded-2xl border border-white/10 text-xs text-slate-300 italic">
-                "Both doctors Dr. Vinay and Dr. Gopi Krishna are very welcoming and friendly. Dr. Vinay provided excellent service and made me feel right at home with zero pain!" — Y Rajitha (Patient Review)
+                "Both doctors Dr. Vinay and Dr. Gopi Krishna are very welcoming and friendly. Dr.
+                Vinay provided excellent service and made me feel right at home with zero pain!" — Y
+                Rajitha (Patient Review)
               </div>
 
               <div className="pt-2 flex flex-wrap gap-4">
@@ -240,7 +248,10 @@ export function DoctorPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {PATIENT_STORIES.slice(0, 3).map((s) => (
-              <div key={s.id} className="glass-card p-6 rounded-2xl border border-white/10 space-y-3">
+              <div
+                key={s.id}
+                className="glass-card p-6 rounded-2xl border border-white/10 space-y-3"
+              >
                 <div className="flex gap-1 text-amber-gold">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-3.5 w-3.5 fill-amber-gold" />
