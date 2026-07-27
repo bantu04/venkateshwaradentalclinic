@@ -5,12 +5,16 @@ import { routeTree } from "./routeTree.gen";
 export const getRouter = () => {
   const queryClient = new QueryClient();
 
+  const isGitHubPages =
+    typeof window !== "undefined" &&
+    window.location.pathname.startsWith("/venkateshwaradentalclinic");
+
   const router = createRouter({
     routeTree,
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
-    basepath: "/radiant-build-framework",
+    basepath: isGitHubPages ? "/venkateshwaradentalclinic" : "/",
   });
 
   return router;

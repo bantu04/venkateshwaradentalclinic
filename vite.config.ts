@@ -31,7 +31,7 @@ function copyIndexTo404Plugin() {
 }
 
 export default defineConfig({
-  base: "/radiant-build-framework/",
+  base: process.env.NODE_ENV === "production" ? "/venkateshwaradentalclinic/" : "/",
   plugins: [
     TanStackRouterVite(),
     react(),
