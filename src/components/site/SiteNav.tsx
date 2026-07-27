@@ -29,14 +29,22 @@ export function SiteNav() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "backdrop-blur-xl bg-ivory/90 border-b border-blush/40 py-3 shadow-xs"
-            : "backdrop-blur-md bg-ivory/80 border-b border-blush/30 py-4"
+            ? "backdrop-blur-xl bg-ivory/95 border-b border-blush/40 py-3 shadow-md text-charcoal"
+            : "backdrop-blur-md bg-charcoal/50 border-b border-ivory/10 py-4 text-ivory"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6">
           <Link to="/" className="group flex items-baseline gap-2">
-            <span className="font-serif text-2xl tracking-tight text-charcoal">Venkateswara</span>
-            <span className="font-serif italic text-sage-dark text-lg">dental hospital</span>
+            <span
+              className={`font-serif text-2xl tracking-tight ${scrolled ? "text-charcoal" : "text-ivory"}`}
+            >
+              Venkateswara
+            </span>
+            <span
+              className={`font-serif italic text-lg ${scrolled ? "text-sage-dark" : "text-gold"}`}
+            >
+              dental hospital
+            </span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -44,8 +52,14 @@ export function SiteNav() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="text-[13px] tracking-wide text-charcoal/80 hover:text-sage-dark transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-sage-dark after:transition-all hover:after:w-full"
-                activeProps={{ className: "text-sage-dark after:!w-full" }}
+                className={`text-[13px] tracking-wide transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:transition-all hover:after:w-full ${
+                  scrolled
+                    ? "text-charcoal/80 hover:text-sage-dark after:bg-sage-dark"
+                    : "text-ivory/90 hover:text-gold after:bg-gold"
+                }`}
+                activeProps={{
+                  className: `${scrolled ? "text-sage-dark" : "text-gold"} after:!w-full`,
+                }}
                 activeOptions={{ exact: l.to === "/" }}
               >
                 {l.label}
@@ -56,7 +70,9 @@ export function SiteNav() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={`tel:${CLINIC.phoneRaw}`}
-              className="flex items-center gap-2 text-sm text-charcoal/70 hover:text-sage-dark"
+              className={`flex items-center gap-2 text-sm ${
+                scrolled ? "text-charcoal/70 hover:text-sage-dark" : "text-ivory/80 hover:text-gold"
+              }`}
             >
               <Phone className="h-4 w-4" />
               {CLINIC.phone}
@@ -71,7 +87,7 @@ export function SiteNav() {
 
           <button
             aria-label="Open menu"
-            className="lg:hidden text-charcoal"
+            className={scrolled ? "lg:hidden text-charcoal" : "lg:hidden text-ivory"}
             onClick={() => setOpen(true)}
           >
             <Menu className="h-6 w-6" />
@@ -82,10 +98,10 @@ export function SiteNav() {
       {open && (
         <div className="fixed inset-0 z-60 bg-ivory animate-fade-in lg:hidden">
           <div className="flex items-center justify-between px-6 py-5 border-b border-blush/40">
-            <span className="font-serif text-xl">
+            <span className="font-serif text-xl text-charcoal">
               Venkateswara <span className="italic text-sage-dark">dental hospital</span>
             </span>
-            <button aria-label="Close" onClick={() => setOpen(false)}>
+            <button aria-label="Close" onClick={() => setOpen(false)} className="text-charcoal">
               <X className="h-6 w-6" />
             </button>
           </div>
