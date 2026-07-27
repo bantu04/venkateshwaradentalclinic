@@ -192,7 +192,7 @@ export function DoctorPage() {
                   to="/contact"
                   className="rounded-xl bg-amber-400 px-6 py-3.5 text-xs font-bold text-slate-950 uppercase tracking-wider hover:bg-white transition-colors shrink-0 shadow-sm"
                 >
-                  Book Visit (₹300)
+                  Book Visit
                 </Link>
               </div>
             </div>

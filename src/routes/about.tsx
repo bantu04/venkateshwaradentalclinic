@@ -109,7 +109,7 @@ export function AboutPage() {
                 to="/contact"
                 className="flex items-center gap-2 rounded-xl bg-teal-brand px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-slate-900 transition-all shadow-md"
               >
-                <Calendar className="h-4 w-4" /> Book Appointment (₹300)
+                <Calendar className="h-4 w-4" /> Book Appointment
               </Link>
             </div>
           </div>

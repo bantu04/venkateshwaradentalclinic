@@ -89,7 +89,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link to="/contact" className="hover:text-teal-400 transition-colors text-slate-300">
-                Book Visit (₹300)
+                Book Visit
               </Link>
             </li>
           </ul>

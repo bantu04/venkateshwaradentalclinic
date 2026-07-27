@@ -168,7 +168,7 @@ export function ServicesPage() {
                 to="/contact"
                 className="flex items-center gap-2 rounded-xl bg-teal-brand px-7 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-white hover:text-slate-950 transition-all shadow-md"
               >
-                <Calendar className="h-4 w-4" /> Book Consultation (₹300)
+                <Calendar className="h-4 w-4" /> Book Consultation
               </Link>
               <a
                 href={`tel:${CLINIC.phoneRaw}`}

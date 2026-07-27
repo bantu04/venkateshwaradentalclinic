@@ -103,7 +103,7 @@ export function HeroParallax() {
                 className="flex items-center justify-center gap-2 rounded-xl bg-teal-brand px-7 py-4 text-xs font-bold uppercase tracking-wider text-white shadow-lg hover:bg-slate-900 transition-all hover:scale-105 active:scale-95"
               >
                 <Calendar className="h-4 w-4" />
-                <span>Book Appointment (₹300)</span>
+                <span>Book Appointment</span>
               </Link>
 
               <a

@@ -6,11 +6,10 @@ import { CLINIC } from "@/lib/site-data";
 const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/doctor", label: "Dr. Gopi Krishna" },
-  { to: "/services", label: "29 Treatments" },
+  { to: "/services", label: "Treatments" },
   { to: "/reviews", label: "Patient Stories" },
   { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About Clinic" },
-  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteNav() {
@@ -26,35 +25,31 @@ export function SiteNav() {
 
   return (
     <>
-      {/* Top Banner Bar */}
+      {/* Top Banner Bar - Centered */}
       <div className="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800 hidden md:block">
-        <div className="mx-auto max-w-7xl flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5 text-teal-400 font-medium">
-              <MapPin className="h-3.5 w-3.5" />
-              Balanagar Main Rd, Ferozguda, Hyderabad
-            </span>
-            <span className="text-white/20">•</span>
-            <span className="flex items-center gap-1.5 text-amber-400 font-medium">
-              <Award className="h-3.5 w-3.5" />
-              Award Winning Doctor in Twin Cities
-            </span>
-            <span className="text-white/20">•</span>
-            <span className="flex items-center gap-1.5 text-emerald-300 font-medium">
-              <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-              97% Rating (653+ Stories) · ₹300 Consultation Fee
-            </span>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <a
-              href={`tel:${CLINIC.phoneRaw}`}
-              className="flex items-center gap-1.5 text-amber-300 hover:text-white font-semibold transition-colors"
-            >
-              <Phone className="h-3.5 w-3.5 animate-pulse" />
-              {CLINIC.phone}
-            </a>
-          </div>
+        <div className="mx-auto max-w-7xl flex items-center justify-center gap-6 flex-wrap text-center">
+          <span className="flex items-center gap-1.5 text-teal-400 font-medium">
+            <MapPin className="h-3.5 w-3.5" />
+            Balanagar Main Rd, Ferozguda, Hyderabad
+          </span>
+          <span className="text-white/20">•</span>
+          <span className="flex items-center gap-1.5 text-amber-400 font-medium">
+            <Award className="h-3.5 w-3.5" />
+            Award Winning Doctor in Twin Cities
+          </span>
+          <span className="text-white/20">•</span>
+          <span className="flex items-center gap-1.5 text-emerald-300 font-medium">
+            <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+            97% Rating (653+ Patient Stories)
+          </span>
+          <span className="text-white/20">•</span>
+          <a
+            href={`tel:${CLINIC.phoneRaw}`}
+            className="flex items-center gap-1.5 text-amber-300 hover:text-white font-semibold transition-colors"
+          >
+            <Phone className="h-3.5 w-3.5 animate-pulse" />
+            {CLINIC.phone}
+          </a>
         </div>
       </div>
 
@@ -116,7 +111,7 @@ export function SiteNav() {
                 className="flex items-center gap-2 rounded-xl bg-teal-brand px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md hover:bg-slate-900 transition-all hover:scale-105 active:scale-95"
               >
                 <Calendar className="h-3.5 w-3.5" />
-                <span>Book ₹300 Visit</span>
+                <span>Book Visit</span>
               </Link>
             </div>
 
@@ -198,7 +193,7 @@ export function SiteNav() {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 rounded-xl bg-teal-brand px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white w-full shadow-lg"
             >
-              <Calendar className="h-4 w-4" /> Book Appointment (₹300)
+              <Calendar className="h-4 w-4" /> Book Visit
             </Link>
           </div>
         </div>
