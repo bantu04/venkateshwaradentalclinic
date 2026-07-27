@@ -30,8 +30,8 @@ function copyIndexTo404Plugin() {
   };
 }
 
-export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/venkateshwaradentalclinic/" : "./",
+export default defineConfig({
+  base: "./",
   plugins: [
     TanStackRouterVite(),
     react(),
@@ -48,4 +48,4 @@ export default defineConfig(({ mode }) => ({
     outDir: "docs",
     emptyOutDir: true,
   },
-}));
+});

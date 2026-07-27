@@ -4,11 +4,10 @@ import { routeTree } from "./routeTree.gen";
 
 export const getRouter = () => {
   const queryClient = new QueryClient();
-  const hashHistory = createHashHistory();
 
   const router = createRouter({
     routeTree,
-    history: hashHistory,
+    history: createHashHistory(),
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
